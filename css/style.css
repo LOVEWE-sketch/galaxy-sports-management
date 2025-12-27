@@ -842,3 +842,225 @@ footer{
 .role-filters { display:flex; gap:8px; align-items:center; margin:12px 0; flex-wrap:wrap }
 .role-filters button { padding:8px 12px; border-radius:10px; border:1px solid rgba(255,255,255,0.05); background:transparent; color:var(--muted); cursor:pointer }
 .role-filters button.active { background: linear-gradient(90deg, var(--accent), #7c3aed); color:#05223a; font-weight:700 }
+
+/* ========== LEADERSHIP TEAM - Modern Responsive Design ========== */
+#leadership-team {
+  padding: 48px 0;
+  background: linear-gradient(180deg, rgba(14,165,255,0.02), transparent);
+  border-radius: 16px;
+  margin-top: 48px;
+}
+
+#leadership-team h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #0ea5ff, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 32px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-member {
+  position: relative;
+  padding: 32px 24px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.team-member::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), #7c3aed);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-member:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(14,165,255,0.15), 0 10px 30px rgba(2,8,23,0.4);
+  border-color: rgba(14,165,255,0.2);
+}
+
+.team-member:hover::before {
+  transform: scaleX(1);
+}
+
+.team-member-photo {
+  margin-bottom: 20px;
+}
+
+.photo-ring {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  padding: 4px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), #7c3aed);
+  position: relative;
+  animation: pulseRing 3s ease-in-out infinite;
+}
+
+@keyframes pulseRing {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(14,165,255,0.4); }
+  50% { box-shadow: 0 0 0 15px rgba(14,165,255,0); }
+}
+
+.photo-ring img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--bg);
+  transition: transform 0.4s ease;
+}
+
+.team-member:hover .photo-ring img {
+  transform: scale(1.05);
+}
+
+.team-member-info h3 {
+  font-size: 20px;
+  margin: 0 0 8px 0;
+  color: #e6eef8;
+  letter-spacing: 0.5px;
+}
+
+.team-role {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 16px 0;
+}
+
+.team-social {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: var(--muted);
+  transition: all 0.3s ease;
+}
+
+.team-social a:hover {
+  background: linear-gradient(135deg, var(--accent), #7c3aed);
+  color: #05223a;
+  border-color: var(--accent);
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 8px 20px rgba(14,165,255,0.3);
+}
+
+.team-social svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive adjustments for team section */
+@media (max-width: 980px) {
+  #leadership-team {
+    padding: 36px 20px;
+  }
+  
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+  
+  #leadership-team h2 {
+    font-size: 28px;
+  }
+  
+  .photo-ring {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .team-member {
+    padding: 28px 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  #leadership-team {
+    padding: 32px 16px;
+    margin-top: 32px;
+  }
+  
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  #leadership-team h2 {
+    font-size: 24px;
+  }
+  
+  .photo-ring {
+    width: 110px;
+    height: 110px;
+  }
+  
+  .team-member {
+    padding: 24px 16px;
+  }
+  
+  .team-member-info h3 {
+    font-size: 18px;
+  }
+  
+  .team-role {
+    font-size: 13px;
+  }
+  
+  .team-social a {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .team-social svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 375px) {
+  .team-grid {
+    gap: 16px;
+  }
+  
+  .photo-ring {
+    width: 100px;
+    height: 100px;
+  }
+}
