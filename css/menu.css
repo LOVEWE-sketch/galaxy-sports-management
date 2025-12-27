@@ -61,10 +61,52 @@ label[for="menu_checkbox"] div:last-child { width: 30px; margin-bottom: 0; }
 }
 
 @media (max-width: 480px) {
-  label[for="menu_checkbox"] { width: 30px; height: 30px; }
+  label[for="menu_checkbox"] { 
+    width: 30px; 
+    height: 30px; 
+    top: 16px;
+    right: 16px;
+  }
   label[for="menu_checkbox"] div:first-child { width:18px }
   label[for="menu_checkbox"] div:nth-child(2) { width:12px }
   label[for="menu_checkbox"] div:last-child { width:24px }
+  
+  .nav-menu {
+    width: 85vw;
+    max-width: 320px;
+    right: -320px;
+    padding: 64px 20px 20px 20px;
+  }
+  
+  .nav-menu .nav-top {
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  
+  .nav-menu .nav-top img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  .nav-menu .nav-top h3 {
+    font-size: 1rem;
+  }
+  
+  .nav-menu ul li {
+    margin: 14px 0;
+  }
+  
+  .nav-menu ul li a {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet adjustments */
+@media (max-width: 768px) and (min-width: 481px) {
+  .nav-menu {
+    width: 300px;
+    right: -300px;
+  }
 }
 
 /* Navigation menu styling (keeps existing slide-in panel) */

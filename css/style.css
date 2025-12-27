@@ -10,6 +10,23 @@
   font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
 
+/* Mobile-first optimizations */
+*{
+  box-sizing:border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+}
+
+/* Improve touch targets for mobile */
+a, button, input, textarea, select {
+  touch-action: manipulation;
+}
+
+/* Smooth scrolling for all devices */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
 /* Partners Section */
 .partners-section {
   padding: 2.5rem 0; /* reduced vertical spacing for tighter layout */
@@ -301,19 +318,58 @@ footer{
   font-size:13px;
 }
 
-/* Responsive */
+/* Responsive - Enhanced for all devices */
+/* Tablet (768px - 980px) */
 @media (max-width:980px){
+  .container{ padding:20px; }
   .hero{grid-template-columns:1fr;}
   .players, .grid-3{grid-template-columns:repeat(2,1fr)}
   .services-grid{grid-template-columns:1fr}
+  header{ gap:16px; padding:12px 0; }
+  nav{ gap:10px; }
+  nav a{ font-size:13px; }
+  .hero h2{ font-size:28px; }
+  .hero__image{ height:300px; }
+  .stats{ flex-wrap:wrap; }
+  .contact-section{ flex-direction:column; }
+  .contact-form{ width:100%; }
+  footer{ flex-direction:column; gap:12px; text-align:center; }
 }
 
+/* Mobile (max 640px) */
 @media (max-width:640px){
-  header{flex-direction:column; align-items:flex-start}
-  nav{flex-wrap:wrap}
+  .container{ padding:16px; }
+  header{ flex-direction:column; align-items:flex-start; gap:12px; }
+  header nav{ display:none; } /* Hide desktop nav on mobile - hamburger menu handles it */
+  .brand{ gap:8px; }
+  .brand__logo{ width:48px; height:48px; }
+  .brand__title h1{ font-size:16px; }
+  .brand__title p{ font-size:11px; }
   .players, .grid-3{grid-template-columns:1fr}
   .hero__image{height:220px}
-  .hero h2{font-size:24px}
+  .hero h2{font-size:22px; line-height:1.2; }
+  .hero p{ font-size:14px; }
+  .hero .actions{ flex-direction:column; width:100%; }
+  .hero .actions a{ width:100%; text-align:center; }
+  .cta, .btn{ width:100%; display:block; text-align:center; padding:12px; }
+  section{ margin-top:18px; }
+  .team-card, .player-card{ padding:12px; }
+  .player-card img{ height:140px; }
+  .stats{ flex-direction:column; }
+  .stat-card{ padding:16px; }
+  footer{ padding:16px; }
+  h2, h3{ font-size:20px; }
+  h4{ font-size:16px; }
+}
+
+/* Very small phones (max 375px) */
+@media (max-width:375px){
+  .container{ padding:12px; }
+  .hero h2{ font-size:20px; }
+  .brand__title h1{ font-size:14px; }
+  .hero__image{ height:180px; }
+  section{ margin-top:14px; }
+  .grid-3, .players, .news-list{ gap:12px; }
 }
 
 /* Buttons */
