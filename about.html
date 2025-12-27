@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Us | Galaxy Sports Management Ltd | Professional Football Agency</title>
+  <meta name="description" content="Learn about Galaxy Sports Management - a leading football agency dedicated to player development, career management, and international placements. Our mission, values, and success stories." />
+  <meta name="keywords" content="about football agency, sports management company, football agent background, player representation services, soccer agency history, football career services" />
+  <meta property="og:title" content="About Galaxy Sports Management Ltd" />
+  <meta property="og:description" content="Leading football agency with expertise in player placement and career management worldwide." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://galaxysportsmanagement.com/about.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/menu.js"></script>
+  <script type="module" src="js/scripts.js"></script>
+  <style>
+    /* Hero Section */
+    .about-hero {
+      background: linear-gradient(135deg, rgba(14,165,255,0.08), rgba(124,58,237,0.08));
+      padding: 64px 32px;
+      border-radius: 20px;
+      margin-bottom: 64px;
+      text-align: center;
+      animation: fadeInUp 0.8s ease-out;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .about-hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(14,165,255,0.1) 0%, transparent 70%);
+      animation: pulse 8s ease-in-out infinite;
+    }
+    
+    .about-hero h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--accent), #7c3aed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .about-hero p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Story Section with Image */
+    .story-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 64px;
+      align-items: center;
+    }
+    
+    .story-content {
+      animation: fadeInLeft 0.8s ease-out;
+    }
+    
+    .story-content h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: var(--accent);
+    }
+    
+    .story-content p {
+      color: #e6eef8;
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+    
+    .story-image {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      animation: fadeInRight 0.8s ease-out;
+      aspect-ratio: 4/3;
+      border: 2px solid rgba(14,165,255,0.2);
+    }
+    
+    .story-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .story-image:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Stats Section - Matching card style */
+    .stats-section {
+      margin-bottom: 64px;
+    }
+    
+    .stats-section h3 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+      color: var(--accent);
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+    }
+    
+    .stat-card {
+      text-align: center;
+      padding: 40px 24px;
+      background: var(--card);
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: all 0.3s ease;
+      animation: fadeInScale 0.6s ease-out backwards;
+      animation-delay: calc(var(--index, 0) * 0.1s);
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent);
+      box-shadow: 0 12px 32px rgba(14,165,255,0.3);
+      background: rgba(11,18,32,0.9);
+    }
+    
+    .stat-icon {
+      font-size: 3rem;
+      margin-bottom: 16px;
+      display: block;
+      filter: grayscale(0.3);
+    }
+    
+    .stat-card strong {
+      display: block;
+      font-size: 2.8rem;
+      color: var(--accent);
+      margin-bottom: 8px;
+      font-weight: 800;
+    }
+    
+    .stat-label {
+      color: var(--muted);
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    /* Mission & Values - Matching card style */
+    .mission-values {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      margin-bottom: 64px;
+    }
+    
+    .value-card {
+      padding: 40px 32px;
+      background: var(--card);
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: all 0.4s ease;
+      animation: fadeInUp 0.7s ease-out backwards;
+    }
+    
+    .value-card:nth-child(1) { animation-delay: 0.1s; }
+    .value-card:nth-child(2) { animation-delay: 0.2s; }
+    
+    .value-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent);
+      box-shadow: 0 16px 48px rgba(14,165,255,0.25);
+      background: rgba(11,18,32,0.9);
+    }
+    
+    .value-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+      color: var(--accent);
+    }
+    
+    .value-card p {
+      color: #e6eef8;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      font-size: 1.05rem;
+    }
+    
+    .value-tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    
+    .value-tag {
+      padding: 10px 16px;
+      background: rgba(14,165,255,0.1);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(14,165,255,0.2);
+    }
+    
+    .value-card:hover .value-tag {
+      background: rgba(14,165,255,0.2);
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+
+    /* Contact & Location Section - Matching card style */
+    .contact-location {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 32px;
+      margin-bottom: 64px;
+    }
+    
+    .contact-card, .location-card {
+      padding: 40px 32px;
+      background: var(--card);
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.08);
+      animation: fadeInUp 0.8s ease-out;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-card:hover, .location-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 12px 32px rgba(14,165,255,0.2);
+      transform: translateY(-4px);
+    }
+    
+    .contact-card h3, .location-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+    
+    .contact-card p, .location-card p {
+      color: var(--muted);
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 24px 0;
+    }
+    
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      background: rgba(14,165,255,0.1);
+      border: 2px solid rgba(14,165,255,0.3);
+      border-radius: 10px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .social-btn:hover {
+      background: var(--accent);
+      color: #05223a;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(14,165,255,0.4);
+    }
+    
+    .office-info {
+      margin-top: 24px;
+      padding: 20px;
+      background: rgba(14,165,255,0.05);
+      border-radius: 12px;
+      border-left: 4px solid var(--accent);
+    }
+    
+    .office-info h4 {
+      color: var(--accent);
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+    }
+    
+    .office-info p {
+      color: #e6eef8;
+      line-height: 1.6;
+    }
+    
+    .office-info small {
+      color: var(--muted);
+    }
+    
+    .map-container {
+      width: 100%;
+      height: 350px;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-top: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      border: 1px solid rgba(14,165,255,0.2);
+    }
+    
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Partners Section - Matching card style */
+    .partners-section {
+      margin-bottom: 64px;
+    }
+    
+    .partners-section h3 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 48px;
+      color: var(--accent);
+    }
+    
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px;
+    }
+    
+    .partner-logo {
+      position: relative;
+      overflow: hidden;
+      background: var(--card);
+      border-radius: 16px;
+      padding: 24px;
+      min-height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    
+    .partner-logo:hover {
+      transform: translateY(-8px) scale(1.05);
+      background: rgba(14,165,255,0.15);
+      border-color: var(--accent);
+      box-shadow: 0 12px 32px rgba(14,165,255,0.2);
+    }
+    
+    .partner-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: filter 0.3s ease;
+    }
+    
+    .partner-logo:hover img {
+      filter: brightness(1.1);
+    }
+    
+    /* Enhanced partner logo animation */
+    .partner-logo {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(14,165,255,0.05), rgba(124,58,237,0.05));
+      border-radius: 12px;
+      padding: 16px;
+      min-height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      border: 2px solid transparent;
+    }
+    
+    .partner-logo:hover {
+      transform: translateY(-8px) scale(1.05);
+      background: linear-gradient(135deg, rgba(14,165,255,0.15), rgba(124,58,237,0.15));
+      border-color: var(--accent);
+      box-shadow: 0 12px 32px rgba(14,165,255,0.2);
+    }
+    
+    .partner-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: filter 0.3s ease;
+    }
+    
+    .partner-logo:hover img {
+      filter: brightness(1.1);
+    }
+    
+    /* Stats cards with animation */
+    .stat-card {
+      animation: fadeInScale 0.6s ease-out backwards;
+      animation-delay: calc(var(--index, 0) * 0.1s);
+    }
+    
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+    
+    .about-hero {
+      background: linear-gradient(135deg, rgba(14,165,255,0.1), rgba(124,58,237,0.1));
+      padding: 48px 32px;
+      border-radius: 16px;
+      margin-bottom: 48px;
+      animation: fadeInUp 0.8s ease-out;
+    }
+    
+    .about-hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, var(--accent), #7c3aed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    /* Updated story section for better mobile responsiveness */
+    @media (max-width: 768px) {
+      .story-section {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      
+      .story-image {
+        aspect-ratio: 16/9;
+      }
+      
+      .contact-location {
+        grid-template-columns: 1fr;
+      }
+      
+      .about-hero {
+        padding: 40px 20px;
+      }
+      
+      .about-hero h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+  <script defer src="js/menu.js"></script>
+  <script type="module" src="js/scripts.js"></script>
+</head>
+<body>
+  <!-- Skip to content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <input type="checkbox" id="menu_checkbox" aria-label="Toggle navigation menu">
+  <label for="menu_checkbox" aria-label="Open navigation menu"><div></div><div></div><div></div></label>
+  <nav class="nav-menu">
+    <div class="nav-top">
+      <img src="assets/images/Galaxy Sports Management Ltd Logo.png" alt="logo" style="width:44px;height:44px;object-fit:contain;border-radius:8px;"/>
+      <h3>Galaxy Sports</h3>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="teams.html">Teams</a></li>
+      <li><a href="players.html">Players</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-footer"><a class="cta" href="#contact">Contact</a></div>
+  </nav>
+  <label for="menu_checkbox" class="nav-overlay" aria-hidden="true"></label>
+
+  <div class="container">
+    <header>
+      <div class="brand">
+        <img src="assets/images/Galaxy Sports Management Ltd Logo.png" alt="logo" class="brand__logo" style="width:56px;height:56px;object-fit:contain;"/>
+        <div class="brand__title">
+          <h1>Galaxy Sports Management Ltd</h1>
+          <p>Player placement • Trials • Academies</p>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="services.html">Services</a>
+        <a href="teams.html">Teams</a>
+        <a href="players.html">Players</a>
+        <a href="news.html">News</a>
+        <a class="cta" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span aria-current="page">About</span>
+      </nav>
+
+      <section class="about-hero">
+        <h2>About Galaxy Sports Management</h2>
+        <p style="font-size:1.1rem;color:var(--muted)">Building football careers with integrity and excellence since 2020</p>
+      </section>
+
+      <!-- STORY SECTION WITH IMAGE -->
+      <section class="story-section">
+        <div class="story-content">
+          <h3>Our Story</h3>
+          <p>Galaxy Sports Management Ltd was founded with a vision to revolutionize football talent management. Starting from humble beginnings, we've grown into a respected name in the industry, known for our player-first approach and ethical practices. With a network of scouts, agents, and development officers across multiple continents, we're committed to creating sustainable football careers.</p>
+        </div>
+        <div class="story-image">
+          <img src="assets/images/about-story.jpg" alt="Galaxy Sports Management team working together">
+        </div>
+      </section>
+
+      <!-- CONTACT & LOCATION -->
+      <section class="contact-location">
+        <div class="contact-card">
+          <h3>Contact & Social</h3>
+          <p style="color:var(--muted)">Connect with Galaxy Sports on social media and professional networks.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/galaxysportsmanagementlimited/" target="_blank" class="social-btn">Facebook</a>
+            <a href="https://www.linkedin.com/company/galaxy-sports-management-ltd/?viewAsMember=true" target="_blank" class="social-btn">LinkedIn</a>
+            <a href="https://www.transfermarkt.fr/galaxy-sports-management-limited/beraterfirma/berater/11656" target="_blank" class="social-btn">Transfermarkt</a>
+          </div>
+
+          <div class="office-info">
+            <h4>Our Office</h4>
+            <p>Bogije, 26 Bola Ahmed Tinubu Wy, Ibeju Lekki 105101, Lagos, Nigeria.</p>
+            <small style="display:block;margin-top:8px;color:var(--muted)">Hint: Use the map to book appointments as well</small>
+          </div>
+        </div>
+
+        <div class="location-card">
+          <h3>Location</h3>
+          <!-- MAP: Google Maps iframe for Galaxy Sports Management LTD office location -->
+          <div class="map-container">
+            <iframe id="office-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13049.423954004335!2d33.3149407!3d35.1477416!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1039577084819beb%3A0xbe84723467be889e!2sGalaxy%20Sports%20Management%20LTD!5e0!3m2!1sen!2s!4v1764540465175!5m2!1sen!2s" style="border:0;width:100%;height:100%;min-height:160px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Galaxy Sports office location"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- STATS SECTION -->
+      <section class="stats-section">
+        <h3 style="text-align:center">Our Impact</h3>
+        <div class="stats-grid">
+          <div class="stat-card" style="--index:0">
+            <div class="stat-icon">📈</div>
+            <strong>59+</strong>
+            <span class="stat-label">Players Represented</span>
+          </div>
+          <div class="stat-card" style="--index:1">
+            <div class="stat-icon">🤝</div>
+            <strong>40+</strong>
+            <span class="stat-label">Clubs & Academies</span>
+          </div>
+          <div class="stat-card" style="--index:2">
+            <div class="stat-icon">🌍</div>
+            <strong>15+</strong>
+            <span class="stat-label">Countries Active</span>
+          </div>
+          <div class="stat-card" style="--index:3">
+            <div class="stat-icon">🎯</div>
+            <strong>90%</strong>
+            <span class="stat-label">Success Rate</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- MISSION & VALUES -->
+      <section class="mission-values">
+        <div class="value-card">
+          <h3>Our Mission</h3>
+          <p>To discover, develop and place football talent with integrity and professionalism. We create sustainable careers and foster long-term development for every player we represent.</p>
+          <div class="value-tags">
+            <div class="value-tag">Ethical Representation</div>
+            <div class="value-tag">Player Development</div>
+            <div class="value-tag">Global Opportunities</div>
+          </div>
+        </div>
+        <div class="value-card">
+          <h3>Our Values</h3>
+          <p>Integrity • Excellence • Innovation • Player-First Approach • Transparency • Sustainable Growth</p>
+          <div class="value-tags">
+            <div class="value-tag">Trust & Transparency</div>
+            <div class="value-tag">Continuous Growth</div>
+            <div class="value-tag">Excellence Always</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PARTNERS SECTION WITH HOVER ANIMATIONS -->
+      <section class="partners-section">
+        <h3>Our Partners</h3>
+        <div class="partners-grid">
+          <div class="partner-logo"><img src="assets/images/ppro football trial s.jpg" alt="PROFOOTBALL TRIAL"></div>
+          <div class="partner-logo"><img src="assets/images/footdraft.png" alt="footdraft"></div>
+          <div class="partner-logo"><img src="assets/images/lax global.png" alt="LAX ACADEMY"></div>
+          <div class="partner-logo"><img src="assets/images/msm czech republic.jpg" alt="MSM"></div>
+          <div class="partner-logo"><img src="assets/images/p4f.jpg" alt="P4F"></div>
+          <div class="partner-logo"><img src="assets/images/sportmate 36-.jpg" alt="sportmate360"></div>
+          <!-- Licosia FC partner logo: use the stable filename that already exists in assets/images -->
+          <div class="partner-logo"><img src="assets/images/licosia fc.png" alt="Licosia FC" title="Licosia FC"></div>
+          <div class="partner-logo"><img src="assets/images/adana.jpg" alt="Adana" title="Adana FC"></div>
+          <div class="partner-logo"><img src="assets/images/determine girl.png" alt="Licosia FC" title="Determine Girls"></div>
+          <div class="partner-logo"><img src="assets/images/duisbrerg msv museum logo.webp" alt="Licosia FC" title="Fc Duisburg"></div><!-- 5 empty spaces for more clubs -->
+          <div class="partner-logo"><img src="assets/images/GZA.jpg" alt="GZA" title="GZA"></div>
+          <div class="partner-logo"><img src="assets/images/sakarya.jpg" alt="Sakarya" title="Sarkarya"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
+
+    <footer>
+      <div>
+        <strong>Galaxy Sports Management Ltd</strong>
+        <div class="copyright">© <span id="yr"></span> All rights reserved</div>
+      </div>
+      <div class="contact-details">
+        Email: info@galaxysports.com • Tel: +357 99 641 238
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

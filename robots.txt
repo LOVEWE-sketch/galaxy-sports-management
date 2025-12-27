@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://galaxysportsmanagement.com/sitemap.xml
+
+# Disallow admin/config files (if any in future)
+Disallow: /data/
+Disallow: /.git/
+Disallow: /.github/
+
+# Allow important pages
+Allow: /index.html
+Allow: /about.html
+Allow: /services.html
+Allow: /players.html
+Allow: /teams.html
+Allow: /news.html
+Allow: /assets/
