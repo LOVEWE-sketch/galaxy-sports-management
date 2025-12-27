@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message Sent - Galaxy Sports Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/brand.css">
+  <meta name="robots" content="noindex">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container" style="max-width:1200px">
+      <a href="index.html" class="logo">
+        <img src="assets/images/galaxy-logo.png" alt="Galaxy Sports Management Logo" width="50" height="50">
+        <span>Galaxy Sports Management</span>
+      </a>
+      <input type="checkbox" id="menu_checkbox" aria-label="Toggle navigation menu">
+      <label for="menu_checkbox" aria-label="Open navigation menu">
+        <div></div><div></div><div></div>
+      </label>
+      <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="players.html">Players</a>
+        <a href="services.html">Services</a>
+        <a href="news.html">News</a>
+        <a href="teams.html">Partners</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <label for="menu_checkbox" class="nav-overlay" aria-hidden="true"></label>
+    </div>
+  </header>
+
+  <!-- SUCCESS MESSAGE -->
+  <main>
+    <section style="min-height:70vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:60px 20px">
+      <div>
+        <div style="width:80px; height:80px; background:linear-gradient(135deg, var(--accent), #06d6a0); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 24px; animation:scaleIn 0.5s ease-out">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <h1 style="font-size:2.5rem; margin-bottom:16px; color:white">Message Sent!</h1>
+        <p style="font-size:1.125rem; color:var(--muted); max-width:500px; margin:0 auto 32px">Thank you for contacting Galaxy Sports Management. We've received your message and will respond within 24-48 hours.</p>
+        <a href="index.html" class="btn btn-primary">Return to Homepage</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container" style="max-width:1200px">
+      <p>&copy; <span id="yr"></span> Galaxy Sports Management Ltd. All rights reserved.</p>
+      <div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-top:16px">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="players.html">Players</a>
+        <a href="services.html">Services</a>
+        <a href="news.html">News</a>
+        <a href="teams.html">Partners</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/scripts.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

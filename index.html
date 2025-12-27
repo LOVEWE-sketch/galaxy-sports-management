@@ -28,6 +28,41 @@
   <meta name="geo.region" content="CY" />
   <meta name="geo.placename" content="Cyprus" />
   <link rel="canonical" href="https://galaxysportsmanagement.com/" />
+  
+  <!-- Business Contact Information -->
+  <meta name="contact" content="info@galaxysportsmanagement.com" />
+  <meta name="telephone" content="+357-99641238" />
+  
+  <!-- Structured Data for Google Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsOrganization",
+    "name": "Galaxy Sports Management Ltd",
+    "alternateName": "Galaxy Sports Management",
+    "url": "https://galaxysportsmanagement.com",
+    "logo": "https://galaxysportsmanagement.com/assets/images/Galaxy Sports Management Ltd Logo.png",
+    "description": "Professional football agency providing player placement, trials, and career management for footballers worldwide. Representing 59+ players with connections to 40+ clubs and academies.",
+    "email": "info@galaxysportsmanagement.com",
+    "telephone": "+357-99641238",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "CY",
+      "addressLocality": "Cyprus"
+    },
+    "sameAs": [
+      "https://www.instagram.com/galaxysportsmanagement",
+      "https://www.facebook.com/galaxysportsmanagement",
+      "https://www.linkedin.com/company/galaxysportsmanagement"
+    ],
+    "sport": "Football (Soccer)",
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Football Agents Association"
+    }
+  }
+  </script>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -322,45 +357,65 @@
            </div>
       </section>
 
-      <!-- TEAMS -->
-      <section id="teams">
-        <h3>Teams & Partners</h3>
-        <div class="grid-3">
-          <div class="team-card">
-            <img src="assets/images/AC_Omonia_logo.svg.png" alt="Omonia Women" style="width:100%; height:120px; object-fit:cover; border-radius:10px;">
-            <h4 style="margin-top:10px">OMONIA WOMEN</h4>
-            <p style="color:var(--muted)">A professional football club in the repbublic of Cyprus that plays in the top division.</p>
-          </div>
-          <div class="team-card">
-            <img src="assets/images/p4f.jpg" alt="Path4Football" style="width:100%; height:120px; object-fit:cover; border-radius:10px;">
-            <h4 style="margin-top:10px">PATH 4 FOOTBALL</h4>
-            <p style="color:var(--muted)">A professional football scouting company with attribute of direct placement</p>
-          </div>
-          <div class="team-card">
-            <img src="assets/images/kapa.jpg" alt="Partner club logo" style="width:100%; height:120px; object-fit:cover; border-radius:10px;">
-            <h4 style="margin-top:10px">KAPA Kajanni</h4>
-            <p style="color:var(--muted)">A professional football club in Findland that plays in the 5th division</p>
-          </div>
-          <div class="team-card">
-            <img src="assets/images/joga sua maneira.jpg" alt="JSM" style="width:100%; height:120px; object-fit:cover; border-radius:10px;">
-            <h4 style="margin-top:10px">JSM</h4>
-            <p style="color:var(--muted)">A sports consultancy and event planner based in Porto, Portugal.</p>
-          </div>
-          <div class="team-card">
-            <img src="assets/images/ppro football trial s.jpg" alt="PROFOOTBALL TRIAL" style="width:100%; height:120px; object-fit:cover; border-radius:10px;">
-            <h4 style="margin-top:10px">PROFOOTBALL TRIAL</h4>
-            <p style="color:var(--muted)">A professional football trial company connecting players with clubs.</p>
-          </div>
-          <div class="team-card">
-            <img src="assets/images/lax global.png" alt="LAX ACADEMY" style="width:100%; height:120px; object-fit:cover; border-radius:10px;">
-            <h4 style="margin-top:10px">LAX ACADEMY</h4>
-            <p style="color:var(--muted)">A football academy focused on youth development and global opportunities.</p>
+      <!-- TEAMS & PARTNERS -->
+      <section id="teams" class="partners-section">
+        <h2>Our Trusted Partners</h2>
+        <p style="text-align:center; color:var(--muted); max-width:700px; margin:0 auto 32px;">Collaborating with leading clubs, academies, and sports organizations to create opportunities for our players worldwide</p>
+        
+        <div class="partners-grid">
+          <div class="partner-card card">
+            <div class="partner-logo-wrapper">
+              <img src="assets/images/AC_Omonia_logo.svg.png" alt="Omonia Women" loading="lazy">
             </div>
+            <h4>OMONIA WOMEN</h4>
+            <p>Professional football club in Cyprus playing in the top division</p>
           </div>
-             <div class="text-center">
-             <a href="teams.html" class="btn btn-primary">View All Teams <span class="btn-arrow">→</span></a>
-             </div>
-          </section>
+          
+          <div class="partner-card card">
+            <div class="partner-logo-wrapper">
+              <img src="assets/images/p4f.jpg" alt="Path4Football" loading="lazy">
+            </div>
+            <h4>PATH 4 FOOTBALL</h4>
+            <p>Professional football scouting with direct placement services</p>
+          </div>
+          
+          <div class="partner-card card">
+            <div class="partner-logo-wrapper">
+              <img src="assets/images/kapa.jpg" alt="KAPA Kajanni" loading="lazy">
+            </div>
+            <h4>KAPA KAJANNI</h4>
+            <p>Professional football club in Finland - 5th division</p>
+          </div>
+          
+          <div class="partner-card card">
+            <div class="partner-logo-wrapper">
+              <img src="assets/images/joga sua maneira.jpg" alt="JSM" loading="lazy">
+            </div>
+            <h4>JOGA SUA MANEIRA</h4>
+            <p>Sports consultancy and event planning in Porto, Portugal</p>
+          </div>
+          
+          <div class="partner-card card">
+            <div class="partner-logo-wrapper">
+              <img src="assets/images/ppro football trial s.jpg" alt="ProFootball Trial" loading="lazy">
+            </div>
+            <h4>PROFOOTBALL TRIAL</h4>
+            <p>Connecting players with professional football trials worldwide</p>
+          </div>
+          
+          <div class="partner-card card">
+            <div class="partner-logo-wrapper">
+              <img src="assets/images/lax global.png" alt="LAX Academy" loading="lazy">
+            </div>
+            <h4>LAX ACADEMY</h4>
+            <p>Youth football development and global opportunities</p>
+          </div>
+        </div>
+        
+        <div class="text-center" style="margin-top:32px;">
+          <a href="teams.html" class="btn btn-primary">View All Partners <span class="btn-arrow">→</span></a>
+        </div>
+      </section>
 
           <!-- PLAYERS -->
           <section id="players">
@@ -521,16 +576,21 @@
             <h3>Work with us</h3>
             <p style="color:var(--muted)">Get in touch to discuss representation, trials or partnerships.</p>
           </div>
-          <form style="min-width:280px; width:420px; max-width:100%" onsubmit="handleContact(event)">
+          <form style="min-width:280px; width:420px; max-width:100%" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/success.html">
+            <!-- Netlify Forms - Free contact form, no database needed -->
+            <input type="hidden" name="form-name" value="contact">
+            <p style="display:none;">
+              <label>Don't fill this out: <input name="bot-field" /></label>
+            </p>
             <div style="display:flex; gap:8px; margin-bottom:8px">
-              <input required placeholder="Full name" id="c_name" style="flex:1; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit">
-              <input required placeholder="Email" id="c_email" style="flex:1; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit">
+              <input required placeholder="Full name" name="name" type="text" style="flex:1; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit">
+              <input required placeholder="Email" name="email" type="email" style="flex:1; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit">
             </div>
             <div style="margin-bottom:8px">
-              <input placeholder="Subject" id="c_subject" style="width:100%; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit">
+              <input placeholder="Subject" name="subject" type="text" style="width:100%; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit">
             </div>
             <div style="margin-bottom:8px">
-              <textarea placeholder="Message" id="c_message" rows="3" style="width:100%; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit"></textarea>
+              <textarea required placeholder="Message" name="message" rows="3" style="width:100%; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit"></textarea>
             </div>
             <div style="text-align:right"><button class="cta" type="submit">Send message</button></div>
           </form>

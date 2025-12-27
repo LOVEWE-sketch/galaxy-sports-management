@@ -29,14 +29,108 @@ html {
 
 /* Partners Section */
 .partners-section {
-  padding: 2.5rem 0; /* reduced vertical spacing for tighter layout */
+  padding: 2.5rem 0;
 }
 
 .partners-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
   margin: 1.25rem 0;
+}
+
+.partner-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.partner-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), #06d6a0);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.partner-card:hover::before {
+  transform: scaleX(1);
+}
+
+.partner-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.partner-logo-wrapper {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.partner-logo-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), #06d6a0);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.4s ease;
+}
+
+.partner-card:hover .partner-logo-wrapper::after {
+  opacity: 0.3;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.partner-card:hover .partner-logo-wrapper {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.partner-logo-wrapper img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0.95);
+  transition: filter 0.3s ease;
+}
+
+.partner-card:hover .partner-logo-wrapper img {
+  filter: brightness(1.1);
+}
+
+.partner-card h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+  color: white;
+}
+
+.partner-card p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
 }
 
 .partner-logo {
