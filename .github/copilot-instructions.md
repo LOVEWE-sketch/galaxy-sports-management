@@ -77,7 +77,30 @@ const profileHref = player.wiki ? player.wiki : `player-${player.id}.html`;
 const isExternal = !!player.wiki;
 // Then: <a href="${profileHref}" ${isExternal ? 'target="_blank" rel="noopener noreferrer"' : ''}>
 ```
-**Example**: Player #3 (MACK BS BRIGGS) has `linkedin` field and opens external link instead of profile page.
+**When to use external links vs profile pages**:
+- **External wiki link**: Add `"wiki": "https://example.com/player-page"` to JSON - card opens external site
+- **LinkedIn profile**: Add `"linkedin": "https://linkedin.com/in/username"` to JSON - treated same as wiki
+- **Internal profile page**: No wiki/linkedin field - creates/links to `player-{id}.html` with full bio
+- **Example**: Player #3 (MACK BS BRIGGS) has `linkedin` field and opens LinkedIn instead of profile page
+
+**Creating Wikipedia-style profile pages** (for team leadership):
+1. Add player to JSON **without** `wiki` or `linkedin` field
+2. Create `player-{id}.html` with comprehensive bio sections:
+   - Full biography with multiple paragraphs
+   - Career timeline and achievements
+   - Photo gallery (use `.player-image` class for lightbox)
+   - Contact/social links in profile
+3. Example structure for leadership bios (Ajayi Adenerian, Mack BS Briggs):
+   ```html
+   <article class="card">
+     <h3>Early Career</h3>
+     <p>Detailed background...</p>
+     <h3>Professional Achievements</h3>
+     <p>Career highlights...</p>
+     <h3>Current Role</h3>
+     <p>Responsibilities at Galaxy Sports Management...</p>
+   </article>
+   ```
 
 
 ### Player Filtering System
@@ -103,12 +126,22 @@ players.html implements **client-side filtering** using data attributes:
     });
   }
   ```
-- **Animation distribution**: Cards get rotating `anim-{1-6}` classes in inline script (NOT AnimationManager)
+- **Animation distribution**: Cards get rotating `anim-{1-7}` classes in inline script (NOT AnimationManager)
 - **Custom event**: After populating `#peopleGrid`, scripts.js fires `playersPopulated` event for page scripts to initialize
 
 ## Critical Patterns & Conventions
 
-### 1. Adding New Players (3-step workflow)
+### 1. Accessibility Features
+All pages include consistent accessibility patterns:
+- **Skip links**: `<a href="#main-content" class="skip-link">` at top of `<body>` for keyboard navigation
+- **Main landmark**: `<main id="main-content">` for skip link target
+- **ARIA labels**: Navigation menus, buttons, and overlays use proper ARIA attributes
+- **Back to top button**: `<button id="backToTop" aria-label="Back to top">↑</button>` appears after 300px scroll
+  - Auto-handled by js/scripts.js (adds `.visible` class, smooth scroll to top)
+- **Semantic HTML**: Proper use of `<nav>`, `<header>`, `<footer>`, `<article>`, `<section>`
+- **Alt text**: All images require `alt` attributes describing content
+
+### 2. Adding New Players (3-step workflow)
 1. **Update JSON**: Add object to `data/projects.json` `players[]` array:
    ```json
    {
@@ -127,7 +160,7 @@ players.html implements **client-side filtering** using data attributes:
    - Update `<title>`, `<h2>`, breadcrumb, photo `src`, bio text
    - Ensure navigation menu has `.active` class on Players link
 
-### 2. Hamburger Menu System (Checkbox Pattern)
+### 3. Hamburger Menu System (Checkbox Pattern)
 Uses **pure CSS** with hidden checkbox + visible label. Every HTML page must include:
 ```html
 <input type="checkbox" id="menu_checkbox" aria-label="Toggle navigation menu">
@@ -139,13 +172,17 @@ Uses **pure CSS** with hidden checkbox + visible label. Every HTML page must inc
 ```
 - **Toggle**: `input#menu_checkbox` (display:none) controls `.nav-menu` slide-in from `right:-340px`
 - **Hamburger**: `label[for="menu_checkbox"]` at fixed `top:20px; right:20px` with 3 `<div>` dots
-- **JS enhancement**: js/menu.js adds `.hamburger-scrolling` class on scroll (scales down hamburger)
+- **JS enhancement** (js/menu.js):
+  - Adds `.hamburger-scrolling` class on scroll
+  - Scales down hamburger (scale: 1.0 → 0.6) and reduces opacity based on scroll position
+  - Threshold: 50px scroll before transformation begins
+  - Auto-resets to full size/opacity 160ms after scrolling stops
 - **Accessibility**: Uses proper ARIA labels and roles for screen readers
 
-### 3. Animation System (IntersectionObserver)
+### 4. Animation System (IntersectionObserver)
 Powered by js/modules/animations.js `AnimationManager` class:
 - **Setup**: Elements get `.pre-animation` class (opacity:0, translateY:30px)
-- **Trigger**: Observer adds `anim-{1-7}` class when entering viewport
+- **Trigger**: Observer adds animation class when entering viewport
 - **Keyframes**: Defined in css/animations.css (`fadeUpSmooth`, `fadeScaleIn`, `slideRightFade`, etc.)
 - **Distribution**: js/scripts.js rotates through 7 variations via modulo:
   ```javascript
@@ -158,13 +195,47 @@ Powered by js/modules/animations.js `AnimationManager` class:
   }
   ```
 - **Available animations**: `.anim-1` through `.anim-7` (fadeUpSmooth, fadeScaleIn, slideRightFade, bounce, scale, slide-left, fade-rotate)
-- **Repeat on scroll**: Use `data-repeat-animation="true"` attribute to re-trigger
-- **Adding new animations**:
-  1. Create keyframe in css/animations.css
-  2. Add `.anim-8` class with animation reference
-  3. Update modulo divisor in `distributeAnimations()` from `% 7` to `% 8`
+- **Repeat on scroll**: Use `data-repeat-animation="true"` attribute to re-trigger animation when scrolling back
+- **Manual animation assignment**: Use `animManager.setAnimation(element, 'anim-3')` to set specific animation class
+- **Observer lifecycle**: Use `animManager.observe(element)` to start watching, `animManager.unobserve(element)` to stop
 
-### 4. CSS Architecture
+**Adding more animations to the website**:
+1. **Create new keyframes** in css/animations.css:
+   ```css
+   @keyframes slideInLeft {
+     from { opacity: 0; transform: translateX(-50px); }
+     to { opacity: 1; transform: translateX(0); }
+   }
+   @keyframes pulse {
+     0%, 100% { transform: scale(1); }
+     50% { transform: scale(1.05); }
+   }
+   ```
+2. **Add animation class** in css/animations.css:
+   ```css
+   .anim-8 {
+     animation: slideInLeft 0.8s ease-out forwards;
+   }
+   .anim-9 {
+     animation: pulse 1.2s ease-in-out infinite;
+   }
+   ```
+3. **Update distributeAnimations()** in js/scripts.js (change `% 7` to `% 9`)
+4. **Add to cleanup** in js/modules/animations.js `setAnimation()` method:
+   ```javascript
+   element.classList.remove('anim-1', 'anim-2', 'anim-3', 'anim-4', 'anim-5', 'anim-6', 'anim-7', 'anim-8', 'anim-9');
+   ```
+5. **Animate specific elements** - Apply to cards, headings, images:
+   ```javascript
+   // In DOMContentLoaded:
+   const headings = document.querySelectorAll('h2, h3');
+   distributeAnimations(headings);
+   
+   const cards = document.querySelectorAll('.card');
+   distributeAnimations(cards);
+   ```
+
+### 5. CSS Architecture
 **Modular structure** with CSS custom properties:
 - css/style.css: Base layout, components, responsive grids
   - Variables: `--accent: #0ea5ff`, `--card: #0b1220`, `--muted: #94a3b8`, `--bg: #0f1724`
@@ -189,7 +260,18 @@ python -m http.server 8000
 
 # VS Code Live Server (recommended)
 # Right-click index.html → "Open with Live Server"
+
+# PowerShell simple HTTP server (Windows built-in, no installation)
+# Navigate to project directory then run:
+cd "c:\Users\MACK\Desktop\galaxy - Copy"
+# Then open browser to http://localhost:8000
 ```
+
+**Key files to watch during development**:
+- `data/projects.json` - Edit player/news/team data (changes reflected on page refresh)
+- `js/scripts.js` - Core JavaScript logic (module, requires browser refresh)
+- `css/style.css` - Global styles and responsive layouts
+- Individual HTML pages - Static content updates
 
 ### Deployment
 Per README.md:
@@ -216,6 +298,62 @@ Per README.md:
 - Google Fonts (Inter family) loaded via `<link>` tag
 - Vanilla JavaScript (ES6 modules)
 - No npm, webpack, babel, or transpilation
+
+## Team Leadership Pages (Wikipedia-Style Bios)
+
+For key team members (Ajayi Adenerian, Mack BS Briggs, etc.) create comprehensive profile pages:
+
+### 1. Add to JSON without external links
+```json
+{
+  "id": 3,
+  "name": "MACK BS BRIGGS",
+  "age": 17,
+  "position": "DM",
+  "nationality": "Liberia",
+  "currentClub": "Free Player",
+  "photo": "assets/images/mack bs briggs action.jpg",
+  "role": "Technical Director & Scout",
+  "highlights": "Football scout, technical director, and semi-pro footballer at Galaxy Sports Management Ltd"
+}
+```
+**Important**: Do NOT add `wiki` or `linkedin` fields - this forces internal profile page creation.
+
+### 2. Create comprehensive bio page
+Copy `player-1.html` → `player-3.html` (matching JSON id):
+```html
+<section class="page-header">
+  <h2>MACK BS BRIGGS</h2>
+  <p>Technical Director & Scout • Age 17 • Galaxy Sports Management</p>
+</section>
+
+<article class="card">
+  <div class="player-gallery">
+    <img class="player-image" src="assets/images/mack bs briggs action.jpg" alt="Mack BS Briggs">
+  </div>
+  
+  <h3>About</h3>
+  <p>Opening paragraph with overview of their role and background...</p>
+  
+  <h3>Early Career</h3>
+  <p>Detailed history, youth career, training background...</p>
+  
+  <h3>Professional Journey</h3>
+  <p>Career progression, key achievements, milestones...</p>
+  
+  <h3>Role at Galaxy Sports Management</h3>
+  <p>Current responsibilities, areas of expertise, player development focus...</p>
+  
+  <h3>Philosophy & Approach</h3>
+  <p>Coaching/scouting philosophy, working methods, values...</p>
+</article>
+```
+
+### 3. Leadership team display patterns
+- **About page**: Create separate "Leadership Team" section with cards linking to full bios
+- **Card format**: Photo + name + title + brief summary + "Read more" link to profile
+- **Profile page structure**: Multiple sections with headers, detailed paragraphs, photo gallery
+- **Back navigation**: Include breadcrumb and "Back to About" button
 
 ## Adding News Articles
 
