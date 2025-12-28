@@ -19,7 +19,7 @@
         "nationality": "Liberia",
         "currentClub": "Determine Girls Fc",
       "photo": "assets/images/lucy close shoot with captian band.jpg",
-      "highlights": "Solid defender with great pace and crossing ability."
+      "highlights": "Experienced left-back and team captain at Determine Girls FC. Known for solid defensive positioning, explosive pace down the flanks, and excellent crossing ability. Leadership qualities on and off the pitch with multiple seasons of competitive football experience in West African leagues."
     },
     {
       "id": 3,
@@ -50,7 +50,7 @@
       "nationality": "Liberia",
       "currentClub": "TBD",
       "photo": "assets/images/fred-c-nayou.jpg",
-      "highlights": "Versatile midfielder with strong ball control and vision."
+      "highlights": "Highly versatile central midfielder with exceptional ball control, vision, and passing range. Comfortable playing as box-to-box midfielder or attacking midfielder. Strong technical ability with excellent work rate. Seeking professional opportunities in European leagues. Previous experience in Liberian domestic leagues."
     },
     {
       "id": 6,
@@ -91,6 +91,16 @@
       "currentClub": "PUYNIK",
       "photo": "assets/images/tartev-kchernian.jpg",
       "highlights": "Strong wing forward with excellent aerial presence and goal contribution."
+    },
+    {
+      "id": 10,
+      "name": "SANTIAGO DE SOUSA",
+      "age": 22,
+      "position": "ST",
+      "nationality": "Venezuela",
+      "currentClub": "KAPA KAJANNI",
+      "photo": "assets/images/santiago signed flyer.JPG",
+      "highlights": "Talented Venezuelan striker who signed professional contract with KAPA Kajanni in Finland's 5th division. Known for clinical finishing and strong work rate."
     }
   ],
   "news": [
