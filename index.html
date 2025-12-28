@@ -217,13 +217,15 @@
 
   <div class="container">
     <header>
-      <div class="brand">
-        <img src="assets/images/Galaxy Sports Management Ltd Logo.png" alt="Galaxy Sports Management Ltd logo" class="brand__logo" style="width:56px;height:56px;object-fit:contain;background:transparent;" />
-        <div class="brand__title">
-          <h1>Galaxy Sports Management Ltd</h1>
-          <p>Player placement • Trials • Academies</p>
+      <a href="index.html" style="text-decoration: none; color: inherit;">
+        <div class="brand">
+          <img src="assets/images/Galaxy Sports Management Ltd Logo.png" alt="Galaxy Sports Management Ltd logo" class="brand__logo" style="width:56px;height:56px;object-fit:contain;background:transparent;" />
+          <div class="brand__title">
+            <h1>Galaxy Sports Management Ltd</h1>
+            <p>Player placement • Trials • Academies</p>
+          </div>
         </div>
-      </div>
+      </a>
       <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -585,23 +587,26 @@
             <h3>Work with us</h3>
             <p style="color:var(--muted)">Get in touch to discuss representation, trials or partnerships.</p>
           </div>
-          <form style="min-width:280px; width:420px; max-width:100%" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/success.html" netlify-to="bustersilvabriggs@gmail.com">
-            <!-- Netlify Forms - Sends notifications to bustersilvabriggs@gmail.com -->
+          <form name="contact" method="POST" netlify netlify-honeypot="bot-field" action="/success.html" style="min-width:280px; width:420px; max-width:100%">
             <input type="hidden" name="form-name" value="contact">
             <p style="display:none;">
-              <label>Don't fill this out: <input name="bot-field" /></label>
+              <label>Don't fill this out if you're human: <input name="bot-field" /></label>
             </p>
-            <div style="display:flex; gap:8px; margin-bottom:8px">
-              <input required placeholder="Full name" name="name" type="text" style="flex:1; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit">
-              <input required placeholder="Email" name="email" type="email" style="flex:1; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit">
-            </div>
-            <div style="margin-bottom:8px">
+            <p style="margin-bottom:8px">
+              <input required placeholder="Full name" name="name" type="text" style="width:100%; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit">
+            </p>
+            <p style="margin-bottom:8px">
+              <input required placeholder="Email" name="email" type="email" style="width:100%; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit">
+            </p>
+            <p style="margin-bottom:8px">
               <input placeholder="Subject" name="subject" type="text" style="width:100%; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit">
-            </div>
-            <div style="margin-bottom:8px">
+            </p>
+            <p style="margin-bottom:8px">
               <textarea required placeholder="Message" name="message" rows="3" style="width:100%; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit"></textarea>
-            </div>
-            <div style="text-align:right"><button class="cta" type="submit">Send message</button></div>
+            </p>
+            <p style="text-align:right; margin:0">
+              <button class="cta" type="submit">Send message</button>
+            </p>
           </form>
         </div>
       </section>
