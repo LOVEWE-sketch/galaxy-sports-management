@@ -4,10 +4,6 @@
 [build]
   publish = "."
   
-# Form notifications - sends submissions to your email
-[[plugins]]
-  package = "@netlify/plugin-forms"
-
 # Redirect rules
 [[redirects]]
   from = "/contact"
