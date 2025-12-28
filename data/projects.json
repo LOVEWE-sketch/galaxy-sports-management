@@ -105,6 +105,17 @@
       "clubWebsite": "https://www.kapa-kajanni.fi",
       "photo": "assets/images/santiago signed flyer.JPG",
       "highlights": "Talented Venezuelan striker who signed professional contract with KAPA Kajanni in Finland's 5th division. Known for clinical finishing, strong work rate, and intelligent movement. Successfully transitioned from South American to European football."
+    },
+    {
+      "id": 11,
+      "name": "RIANA CYRUS",
+      "age": 24,
+      "position": "FW",
+      "nationality": "Barbados",
+      "currentClub": "ADANASPOR",
+      "clubWebsite": "https://www.adanaspor.org.tr",
+      "photo": "assets/images/riana-cyrus.jpg",
+      "highlights": "Dynamic Barbadian forward who made the remarkable journey from Caribbean football to Turkey's women's league. Currently playing for Adanaspor in Turkish Women's Second League. Known for explosive pace, technical ability, and adaptability to different playing styles. Represents the next generation of Caribbean talent breaking into European football."
     }
   ],
   "news": [
