@@ -8,8 +8,9 @@
       "position": "CF",
       "nationality": "Barbados",
       "currentClub": "Paradise",
+      "clubWebsite": "https://www.paradisefc.bb",
       "photo": "assets/images/acacia small.jpg",
-      "highlights": "A dynamic center forward with a keen eye for goal."
+      "highlights": "Dynamic Barbadian center forward and former national team player. Top scorer at Paradise FC in 2024. Known for explosive pace, power, and clinical finishing."
     },
     {
       "id": 2,
@@ -30,7 +31,7 @@
         "currentClub": "Free Player",
       "photo": "assets/images/mack bs briggs action.jpg",
       "linkedin": "https://www.linkedin.com/in/mack-bs-briggs-1a4634135/",
-      "highlights": "Young defensive midfielder with excellent tactical awareness."
+      "highlights": "Young defensive midfielder with excellent tactical awareness. Technical Director & Scout at Galaxy Sports Management. Semi-professional footballer seeking opportunities in European leagues."
     },
     {
       "id": 4,
@@ -40,7 +41,7 @@
       "nationality": "Ghana",
       "currentClub": "TBD",
       "photo": "assets/images/elshaddi-achempong.jpg",
-      "highlights": "Talented forward with excellent technical skills and finishing ability."
+      "highlights": "Talented Ghanaian forward with excellent technical skills, dribbling ability, and clinical finishing. Strong first touch and capable of playing across the front line. Seeking professional opportunities in European leagues."
     },
     {
       "id": 5,
@@ -55,12 +56,12 @@
     {
       "id": 6,
       "name": "NORBERTO OTTO",
-      "age": 0,
+      "age": 28,
       "position": "GK",
       "nationality": "ARGENTINA",
       "currentClub": "CA Adelante",
       "photo": "assets/images/goalkeeper.jpg",
-      "highlights": "Professional goalkeeper - details to be added."
+      "highlights": "Experienced Argentine goalkeeper currently playing for CA Adelante. Strong shot-stopper with excellent reflexes, commanding presence in the box, and good distribution. Experienced in South American football."
     },
     {
       "id": 7,
@@ -69,8 +70,9 @@
       "position": "CB",
       "nationality": "Ghana",
       "currentClub": "OMONIA WOMEN",
+      "clubWebsite": "https://www.omoniawomen.com",
       "photo": "assets/images/linda-amoka-official.jpg",
-      "highlights": "Strong centre back with excellent positioning and leadership at the back."
+      "highlights": "Strong centre-back playing for Omonia Women in Cyprus. Excellent positioning, aerial dominance, and leadership qualities. Experienced in top-flight women's football with strong defensive instincts and ability to build play from the back."
     },
     {
       "id": 8,
@@ -80,7 +82,7 @@
       "nationality": "England",
       "currentClub": "TBD",
       "photo": "assets/images/lisa-shazelle.jpg",
-      "highlights": "Creative centre forward with excellent movement and finishing."
+      "highlights": "Creative English centre forward with excellent movement off the ball and clinical finishing. Strong link-up play, intelligent positioning, and ability to create chances for teammates. Seeking opportunities in professional women's football leagues."
     },
     {
       "id": 9,
@@ -89,8 +91,9 @@
       "position": "FW",
       "nationality": "Armenia",
       "currentClub": "PUYNIK",
+      "clubWebsite": "https://www.puynik.am",
       "photo": "assets/images/tartev-kchernian.jpg",
-      "highlights": "Strong wing forward with excellent aerial presence and goal contribution."
+      "highlights": "Promising young forward playing for Puynik FC in Armenian Premier League. Strong wing forward with excellent aerial presence, powerful shooting, and consistent goal contributions. Developing talent with high potential."
     },
     {
       "id": 10,
@@ -99,8 +102,9 @@
       "position": "ST",
       "nationality": "Venezuela",
       "currentClub": "KAPA KAJANNI",
+      "clubWebsite": "https://www.kapa-kajanni.fi",
       "photo": "assets/images/santiago signed flyer.JPG",
-      "highlights": "Talented Venezuelan striker who signed professional contract with KAPA Kajanni in Finland's 5th division. Known for clinical finishing and strong work rate."
+      "highlights": "Talented Venezuelan striker who signed professional contract with KAPA Kajanni in Finland's 5th division. Known for clinical finishing, strong work rate, and intelligent movement. Successfully transitioned from South American to European football."
     }
   ],
   "news": [
