@@ -234,7 +234,12 @@
     /* Header */
     header{display:flex; align-items:center; justify-content:space-between; gap:20px}
     .brand{display:flex;align-items:center;gap:12px}
-    .brand__logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:800}
+    .brand__logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:800;animation:logoRotate 20s linear infinite;transform-origin:center}
+    @keyframes logoRotate{
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .brand__logo:hover { animation-play-state: paused; }
     .brand__title{line-height:1}
     .brand__title h1{font-size:18px;margin:0}
     .brand__title p{margin:0;font-size:12px;color:var(--muted)}
@@ -715,7 +720,8 @@
 
     <!-- WHATSAPP FLOATING WIDGET -->
     <a href="https://wa.me/35799641238?text=Hello%20Galaxy%20Sports%20Management" target="_blank" style="position:fixed;bottom:24px;right:24px;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.2);z-index:999;transition:all 0.3s;animation:float 3s ease-in-out infinite" title="Chat with us on WhatsApp">
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <img src="assets/images/whatsapp logo.png" alt="WhatsApp" width="32" height="32" style="object-fit:contain;filter:brightness(0) invert(1)" onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='block'"/>
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="display:none">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371 0-.57 0-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.783 1.14L1.07 3.731l1.386 4.993a9.9 9.9 0 001.516 4.779 9.868 9.868 0 008.407 4.488h.005c5.432 0 9.863-4.431 9.863-9.868 0-2.611-.997-5.067-2.812-6.917a9.895 9.895 0 00-6.956-2.887"/></svg>
     </a>
 
