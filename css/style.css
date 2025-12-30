@@ -709,6 +709,18 @@ footer{
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
+/* Ensure each leadership card stacks vertically and centers content
+   so social icons always sit under the bio text and avatar. This
+   preserves existing HTML links while fixing alignment. */
+.leadership-grid .team-member.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 22px;
+}
+.leadership-grid .team-member .team-social{ width:100%; display:flex; justify-content:center; }
+
 /* Team social icons: consistent size, spacing and alignment */
 .team-social{
   display:flex;
