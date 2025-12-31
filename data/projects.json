@@ -9,7 +9,7 @@
       "nationality": "Barbados",
       "currentClub": "Paradise",
       "clubWebsite": "https://www.paradisefc.bb",
-      "photo": "assets/images/acacia small.jpg",
+      "photo": "assets/images/acacia-small/acacia small.jpg",
       "highlights": "Dynamic Barbadian center forward and former national team player. Top scorer at Paradise FC in 2024. Known for explosive pace, power, and clinical finishing."
     },
     {
@@ -19,7 +19,7 @@
       "position": "LB",
         "nationality": "Liberia",
         "currentClub": "Determine Girls Fc",
-      "photo": "assets/images/lucy close shoot with captian band.jpg",
+      "photo": "assets/images/lucy-massaquoi/lucy close shoot with captian band.jpg",
       "highlights": "Experienced left-back and team captain at Determine Girls FC. Known for solid defensive positioning, explosive pace down the flanks, and excellent crossing ability. Leadership qualities on and off the pitch with multiple seasons of competitive football experience in West African leagues."
     },
     {
@@ -29,7 +29,7 @@
       "position": "DM",
         "nationality": "Liberia",
         "currentClub": "Free Player",
-      "photo": "assets/images/mack bs briggs action.jpg",
+      "photo": "assets/images/mack-bs-briggs/mack bs briggs action.jpg",
       "linkedin": "https://www.linkedin.com/in/mack-bs-briggs-1a4634135/",
       "highlights": "Young defensive midfielder with excellent tactical awareness. Technical Director & Scout at Galaxy Sports Management. Semi-professional footballer seeking opportunities in European leagues."
     },
@@ -40,7 +40,7 @@
       "position": "FW",
       "nationality": "Ghana",
       "currentClub": "TBD",
-      "photo": "assets/images/elshaddi-achempong.jpg",
+      "photo": "assets/images/elshaddi-achempong/elshaddi-achempong.jpg",
       "highlights": "Talented Ghanaian forward with excellent technical skills, dribbling ability, and clinical finishing. Strong first touch and capable of playing across the front line. Seeking professional opportunities in European leagues."
     },
     {
@@ -50,7 +50,7 @@
       "position": "MF",
       "nationality": "Liberia",
       "currentClub": "TBD",
-      "photo": "assets/images/fred-c-nayou.jpg",
+      "photo": "assets/images/fred-nayou/fred-c-nayou.jpg",
       "highlights": "Highly versatile central midfielder with exceptional ball control, vision, and passing range. Comfortable playing as box-to-box midfielder or attacking midfielder. Strong technical ability with excellent work rate. Seeking professional opportunities in European leagues. Previous experience in Liberian domestic leagues."
     },
     {
@@ -60,7 +60,7 @@
       "position": "GK",
       "nationality": "ARGENTINA",
       "currentClub": "CA Adelante",
-      "photo": "assets/images/goalkeeper.jpg",
+      "photo": "assets/images/players-other/goalkeeper.jpg",
       "highlights": "Experienced Argentine goalkeeper currently playing for CA Adelante. Strong shot-stopper with excellent reflexes, commanding presence in the box, and good distribution. Experienced in South American football."
     },
     {
@@ -71,7 +71,7 @@
       "nationality": "Ghana",
       "currentClub": "OMONIA WOMEN",
       "clubWebsite": "https://www.omoniawomen.com",
-      "photo": "assets/images/linda-amoka-official.jpg",
+      "photo": "assets/images/linda-amoka/linda-amoka-official.jpg",
       "highlights": "Strong centre-back playing for Omonia Women in Cyprus. Excellent positioning, aerial dominance, and leadership qualities. Experienced in top-flight women's football with strong defensive instincts and ability to build play from the back."
     },
     {
@@ -81,7 +81,7 @@
       "position": "CF",
       "nationality": "England",
       "currentClub": "TBD",
-      "photo": "assets/images/lisa-shazelle.jpg",
+      "photo": "assets/images/lisa-shazelle/lisa-shazelle.jpg",
       "highlights": "Creative English centre forward with excellent movement off the ball and clinical finishing. Strong link-up play, intelligent positioning, and ability to create chances for teammates. Seeking opportunities in professional women's football leagues."
     },
     {
@@ -92,7 +92,7 @@
       "nationality": "Armenia",
       "currentClub": "PUYNIK",
       "clubWebsite": "https://www.puynik.am",
-      "photo": "assets/images/tartev-kchernian.jpg",
+      "photo": "assets/images/tartev-kchernian/tartev-kchernian.jpg",
       "highlights": "Promising young forward playing for Puynik FC in Armenian Premier League. Strong wing forward with excellent aerial presence, powerful shooting, and consistent goal contributions. Developing talent with high potential."
     },
     {
@@ -103,7 +103,7 @@
       "nationality": "Venezuela",
       "currentClub": "KAPA KAJANNI",
       "clubWebsite": "https://www.kapa-kajanni.fi",
-      "photo": "assets/images/santiago signed flyer.JPG",
+      "photo": "assets/images/news/santiago signed flyer.JPG",
       "highlights": "Talented Venezuelan striker who signed professional contract with KAPA Kajanni in Finland's 5th division. Known for clinical finishing, strong work rate, and intelligent movement. Successfully transitioned from South American to European football."
     },
     {
@@ -114,7 +114,7 @@
       "nationality": "Barbados",
       "currentClub": "ADANASPOR",
       "clubWebsite": "https://www.adanaspor.org.tr",
-      "photo": "assets/images/riana-cyrus.jpg",
+      "photo": "assets/images/rianna-cyrus/Rianna Cyrus.jpg",
       "highlights": "Dynamic Barbadian forward who made the remarkable journey from Caribbean football to Turkey's women's league. Currently playing for Adanaspor in Turkish Women's Second League. Known for explosive pace, technical ability, and adaptability to different playing styles. Represents the next generation of Caribbean talent breaking into European football."
     }
   ],
@@ -125,7 +125,7 @@
       "date": "2025-04-01",
       "excerpt": "Talented Venezeula Striker signed professional contract with kapa kajanni",
       "content": "We are delighted to announce that Santiago De Sousahas signed for the 5th division side Kapa Kajanni in Finland...",
-      "image": "santiago signed flyer.JPG"
+      "image": "news/santiago signed flyer.JPG"
     },
     {
       "id": 2,
@@ -133,7 +133,7 @@
       "date": "2025-10-28",
       "excerpt": "Galaxy Sports Management announces summer trials with partner clubs across Europe",
       "content": "We are excited to announce our summer trial program with multiple partner clubs...",
-      "image": "trial downlaod.jpg"
+      "image": "trials/trial downlaod.jpg"
     }
   ]
 }
