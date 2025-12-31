@@ -30,8 +30,8 @@
   <link rel="canonical" href="https://galaxysportsmanagement.com/" />
   
   <!-- Business Contact Information -->
-  <meta name="contact" content="info@galaxysportsmanagement.com" />
-  <meta name="telephone" content="+357-99641238" />
+  <meta name="contact" content="info@galaxysports.com" />
+  <meta name="telephone" content="+35799641238" />
   
   <!-- Structured Data for Google Rich Snippets -->
   <script type="application/ld+json">
@@ -43,8 +43,8 @@
     "url": "https://galaxysportsmanagement.com",
     "logo": "https://galaxysportsmanagement.com/assets/images/Galaxy Sports Management Ltd Logo.png",
     "description": "Professional football agency providing player placement, trials, and career management for footballers worldwide. Representing 59+ players with connections to 40+ clubs and academies.",
-    "email": "info@galaxysportsmanagement.com",
-    "telephone": "+357-99641238",
+    "email": "info@galaxysports.com",
+    "telephone": "+35799641238",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "CY",
@@ -718,17 +718,72 @@
       </section>
     </main>
 
+    <!-- CHAT POPUP WIDGET -->
+    <div id="chatPopup" style="position:fixed;bottom:100px;right:24px;width:320px;background:#fff;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,0.3);z-index:1000;display:none;animation:slideUp 0.4s ease-out;overflow:hidden">
+      <div style="background:linear-gradient(135deg,#0ea5ff,#1e90ff);padding:20px;color:white;display:flex;align-items:center;gap:12px">
+        <img src="assets/images/mack bs briggs.jpg" alt="Mack BS Briggs" style="width:50px;height:50px;border-radius:50%;object-fit:cover;border:3px solid white">
+        <div>
+          <div style="font-weight:700;font-size:16px">Mack BS Briggs</div>
+          <div style="font-size:12px;opacity:0.9">Co-CEO</div>
+        </div>
+      </div>
+      <div style="padding:20px;background:#f8f9fa;color:#333">
+        <div style="background:white;padding:14px;border-radius:12px 12px 12px 4px;box-shadow:0 2px 8px rgba(0,0,0,0.08);margin-bottom:16px">
+          <p style="margin:0;font-size:14px;line-height:1.5;color:#333">Hi, my name is Mack BS Briggs. I am the Co-CEO. How can we help you?</p>
+        </div>
+        <a href="https://wa.me/35794006515?text=Hi%2C%20I%20need%20help%20with" target="_blank" style="display:block;background:#25D366;color:white;text-align:center;padding:12px;border-radius:8px;text-decoration:none;font-weight:600;transition:all 0.3s">
+          <img src="assets/images/whatsapp logo.png" alt="" width="20" height="20" style="vertical-align:middle;margin-right:8px;filter:brightness(0) invert(1)" onerror="this.style.display='none'">
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+    
     <!-- WHATSAPP FLOATING WIDGET -->
-    <a href="https://wa.me/35799641238?text=Hello%20Galaxy%20Sports%20Management" target="_blank" style="position:fixed;bottom:24px;right:24px;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.2);z-index:999;transition:all 0.3s;animation:float 3s ease-in-out infinite" title="Chat with us on WhatsApp">
+    <a href="https://wa.me/35794006515?text=Hello%20Galaxy%20Sports%20Management" id="whatsappBtn" target="_blank" style="position:fixed;bottom:24px;right:24px;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.2);z-index:999;transition:all 0.3s;animation:float 3s ease-in-out infinite" title="Chat with us on WhatsApp">
       <img src="assets/images/whatsapp logo.png" alt="WhatsApp" width="32" height="32" style="object-fit:contain;filter:brightness(0) invert(1)" onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='block'"/>
       <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="display:none">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371 0-.57 0-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.783 1.14L1.07 3.731l1.386 4.993a9.9 9.9 0 001.516 4.779 9.868 9.868 0 008.407 4.488h.005c5.432 0 9.863-4.431 9.863-9.868 0-2.611-.997-5.067-2.812-6.917a9.895 9.895 0 00-6.956-2.887"/></svg>
     </a>
+    
+    <script>
+      // Chat popup logic
+      (function() {
+        const popup = document.getElementById('chatPopup');
+        const whatsappBtn = document.getElementById('whatsappBtn');
+        let hasShown = false;
+        
+        // Show popup after 3 seconds on first visit
+        setTimeout(() => {
+          if (!hasShown && !sessionStorage.getItem('chatShown')) {
+            popup.style.display = 'block';
+            hasShown = true;
+            sessionStorage.setItem('chatShown', 'true');
+            
+            // Hide after 8 seconds
+            setTimeout(() => {
+              popup.style.display = 'none';
+            }, 8000);
+          }
+        }, 3000);
+        
+        // Show popup when clicking WhatsApp button
+        whatsappBtn.addEventListener('click', (e) => {
+          if (!popup.style.display || popup.style.display === 'none') {
+            e.preventDefault();
+            popup.style.display = 'block';
+          }
+        });
+      })();
+    </script>
 
     <style>
       @keyframes float {
         0%, 100% { transform: translateY(0px); }
         50% { transform: translateY(-10px); }
+      }
+      @keyframes slideUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
       }
     </style>
 
