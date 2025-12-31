@@ -48,14 +48,57 @@
       <nav><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="teams.html">Teams</a><a href="players.html" class="active">Players</a><a href="news.html">News</a><a class="cta" href="#contact">Contact</a></nav>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="page-header"><h2>SHAZELLE BERNICE PASCALL</h2><p>CF • Age 26 • TBD</p></section>
-      <article class="card">
-        <div class="player-gallery">
-          <div class="player-main">
-            <img class="player-image" src="assets/images/lisa-shazelle.jpg" alt="LISA SHAZELLE" onerror="this.onerror=null;this.src='assets/images/default-player.svg'">
-          </div>
+      
+      <style>
+        .player-gallery-slider{position:relative;width:100%;max-width:800px;height:450px;margin:0 auto 32px;border-radius:16px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.3)}
+        .gallery-slide{position:absolute;width:100%;height:100%;opacity:0;transition:opacity 1s ease-in-out}
+        .gallery-slide.active{opacity:1}
+        .gallery-slide img{width:100%;height:100%;object-fit:cover}
+        .gallery-indicators{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10}
+        .gallery-indicator{width:40px;height:4px;background:rgba(255,255,255,0.3);border-radius:2px;cursor:pointer;transition:all 0.3s}
+        .gallery-indicator.active{background:var(--accent);width:60px}
+        .player-stats-card{background:linear-gradient(135deg,#0b1220,#1a1f35);border:2px solid var(--accent);border-radius:16px;padding:24px;margin:24px 0;animation:slideInUp 0.6s ease-out}
+        @keyframes slideInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+        .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:16px}
+        .stat-item{text-align:center;padding:12px;background:rgba(255,255,255,0.02);border-radius:8px;transition:all 0.3s}
+        .stat-item:hover{background:rgba(31,182,255,0.1);transform:translateY(-2px)}
+        .stat-value{font-size:24px;font-weight:700;color:var(--accent);display:block}
+        .stat-label{font-size:12px;color:var(--muted);text-transform:uppercase;margin-top:4px}
+        @media (max-width:640px){.player-gallery-slider{height:300px}.stats-grid{grid-template-columns:repeat(2,1fr)}}
+      </style>
+      
+      <div class="player-gallery-slider">
+        <div class="gallery-slide active"><img src="assets/images/lisa-shazelle.jpg" alt="Shazelle Pascall portrait" loading="eager" width="800" height="450"></div>
+        <div class="gallery-slide"><img src="assets/images/lisa .jpg" alt="Shazelle Pascall in action" loading="lazy" width="800" height="450"></div>
+        <div class="gallery-slide"><img src="assets/images/lisa  (1).jpg" alt="Shazelle Pascall profile" loading="lazy" width="800" height="450"></div>
+        <div class="gallery-slide"><img src="assets/images/lisa germany1.jpg" alt="Shazelle Pascall in Germany" loading="lazy" width="800" height="450"></div>
+        <div class="gallery-indicators">
+          <div class="gallery-indicator active" data-slide="0"></div>
+          <div class="gallery-indicator" data-slide="1"></div>
+          <div class="gallery-indicator" data-slide="2"></div>
+          <div class="gallery-indicator" data-slide="3"></div>
         </div>
+      </div>
+      
+      <script>
+        (function(){const slides=document.querySelectorAll('.gallery-slide');const indicators=document.querySelectorAll('.gallery-indicator');let currentSlide=0;let autoplayInterval;function showSlide(index){slides.forEach(s=>s.classList.remove('active'));indicators.forEach(i=>i.classList.remove('active'));slides[index].classList.add('active');indicators[index].classList.add('active');currentSlide=index}function nextSlide(){const next=(currentSlide+1)%slides.length;showSlide(next)}function startAutoplay(){autoplayInterval=setInterval(nextSlide,4000)}function stopAutoplay(){clearInterval(autoplayInterval)}indicators.forEach((indicator,index)=>{indicator.addEventListener('click',()=>{showSlide(index);stopAutoplay();setTimeout(startAutoplay,8000)})});startAutoplay()})();
+      </script>
+      
+      <div class="player-stats-card">
+        <h3 style="margin-top:0;color:var(--accent)">Player Profile</h3>
+        <div class="stats-grid">
+          <div class="stat-item"><span class="stat-value">26</span><span class="stat-label">Age</span></div>
+          <div class="stat-item"><span class="stat-value">CF</span><span class="stat-label">Position</span></div>
+          <div class="stat-item"><span class="stat-value">🇬🇧</span><span class="stat-label">UK</span></div>
+          <div class="stat-item"><span class="stat-value">🌍</span><span class="stat-label">Int'l Experience</span></div>
+          <div class="stat-item"><span class="stat-value">Benfica</span><span class="stat-label">Current Club</span></div>
+          <div class="stat-item"><span class="stat-value">⚽</span><span class="stat-label">Forward</span></div>
+        </div>
+      </div>
+      
+      <article class="card">
         <h3>About</h3>
         <p>Creative centre forward with intelligent movement and sharp finishing. Shazelle Bernice Louis Pascall is a British footballer currently registered with Sport London e Benfica Ladies in England. She has also played professionally in Lithuania, gaining valuable international experience and exposure. With her adaptability and experience abroad and in the UK, Shazelle is a versatile and reliable player, bringing skill, tactical awareness, and a competitive edge to every squad she joins.</p>
       </article>

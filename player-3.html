@@ -37,18 +37,215 @@
       <nav><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="teams.html">Teams</a><a href="players.html" class="active">Players</a><a href="news.html">News</a><a class="cta" href="#contact">Contact</a></nav>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="page-header"><h2>MACK BS BRIGGS</h2><p>DM • Age 17 • Free Player</p></section>
-        <article class="card">
-          <div class="player-gallery">
-            <div class="player-main">
-              <img class="player-image" src="assets/images/mack bs briggs action.jpg" alt="Mack BS Briggs" onerror="this.onerror=null;this.src='assets/images/default-player.svg'">
-            </div>
+      
+      <!-- Auto-rotating Image Gallery -->
+      <style>
+        .player-gallery-slider {
+          position: relative;
+          width: 100%;
+          max-width: 800px;
+          height: 450px;
+          margin: 0 auto 32px;
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        .gallery-slide {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          transition: opacity 1s ease-in-out;
+        }
+        .gallery-slide.active {
+          opacity: 1;
+        }
+        .gallery-slide img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .gallery-indicators {
+          position: absolute;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          gap: 8px;
+          z-index: 10;
+        }
+        .gallery-indicator {
+          width: 40px;
+          height: 4px;
+          background: rgba(255,255,255,0.3);
+          border-radius: 2px;
+          cursor: pointer;
+          transition: all 0.3s;
+        }
+        .gallery-indicator.active {
+          background: var(--accent);
+          width: 60px;
+        }
+        
+        /* Player Stats Card */
+        .player-stats-card {
+          background: linear-gradient(135deg, #0b1220, #1a1f35);
+          border: 2px solid var(--accent);
+          border-radius: 16px;
+          padding: 24px;
+          margin: 24px 0;
+          animation: slideInUp 0.6s ease-out;
+        }
+        @keyframes slideInUp {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .stats-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          gap: 16px;
+          margin-top: 16px;
+        }
+        .stat-item {
+          text-align: center;
+          padding: 12px;
+          background: rgba(255,255,255,0.02);
+          border-radius: 8px;
+          transition: all 0.3s;
+        }
+        .stat-item:hover {
+          background: rgba(31,182,255,0.1);
+          transform: translateY(-2px);
+        }
+        .stat-value {
+          font-size: 24px;
+          font-weight: 700;
+          color: var(--accent);
+          display: block;
+        }
+        .stat-label {
+          font-size: 12px;
+          color: var(--muted);
+          text-transform: uppercase;
+          margin-top: 4px;
+        }
+        @media (max-width: 640px) {
+          .player-gallery-slider { height: 300px; }
+          .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+      </style>
+      
+      <div class="player-gallery-slider">
+        <div class="gallery-slide active">
+          <img src="assets/images/mack bs briggs action.jpg" alt="Mack BS Briggs in action" loading="eager" width="800" height="450">
+        </div>
+        <div class="gallery-slide">
+          <img src="assets/images/mack bs briggs  against came.jpg" alt="Mack BS Briggs during match" loading="lazy" width="800" height="450">
+        </div>
+        <div class="gallery-slide">
+          <img src="assets/images/mack bs briggs.jpg" alt="Mack BS Briggs portrait" loading="lazy" width="800" height="450">
+        </div>
+        <div class="gallery-slide">
+          <img src="assets/images/MACK.jpeg" alt="Mack BS Briggs professional photo" loading="lazy" width="800" height="450">
+        </div>
+        <div class="gallery-indicators">
+          <div class="gallery-indicator active" data-slide="0"></div>
+          <div class="gallery-indicator" data-slide="1"></div>
+          <div class="gallery-indicator" data-slide="2"></div>
+          <div class="gallery-indicator" data-slide="3"></div>
+        </div>
+      </div>
+      
+      <script>
+        (function() {
+          const slides = document.querySelectorAll('.gallery-slide');
+          const indicators = document.querySelectorAll('.gallery-indicator');
+          let currentSlide = 0;
+          let autoplayInterval;
+          
+          function showSlide(index) {
+            slides.forEach(s => s.classList.remove('active'));
+            indicators.forEach(i => i.classList.remove('active'));
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+            currentSlide = index;
+          }
+          
+          function nextSlide() {
+            const next = (currentSlide + 1) % slides.length;
+            showSlide(next);
+          }
+          
+          function startAutoplay() {
+            autoplayInterval = setInterval(nextSlide, 4000);
+          }
+          
+          function stopAutoplay() {
+            clearInterval(autoplayInterval);
+          }
+          
+          indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+              showSlide(index);
+              stopAutoplay();
+              setTimeout(startAutoplay, 8000);
+            });
+          });
+          
+          startAutoplay();
+        })();
+      </script>
+      
+      <!-- Player Stats Card -->
+      <div class="player-stats-card">
+        <h3 style="margin-top:0; color:var(--accent);">Player Profile</h3>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-value">17</span>
+            <span class="stat-label">Age</span>
           </div>
+          <div class="stat-item">
+            <span class="stat-value">DM</span>
+            <span class="stat-label">Position</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">🇱🇷</span>
+            <span class="stat-label">Liberia</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">U14</span>
+            <span class="stat-label">Youth Int'l</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">Free</span>
+            <span class="stat-label">Status</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">⚽</span>
+            <span class="stat-label">Scout & TD</span>
+          </div>
+        </div>
+      </div>
+      
+      <article class="card">
         <h3>About</h3>
-        <p>Young defensive midfielder with excellent tactical awareness and passing range. Mack BS Briggs is a Liberian football scout, technical director, and semi-pro footballer who currently serves as a key figure at Galaxy Sports Management Ltd. Having started his journey as a former youth national-team player (U14) for Liberia, he now uses his on-field experience and scouting expertise to identify and develop emerging football talent.Through Galaxy Sports Management Ltd, Mack BS Briggs connects young athletes — especially women’s players — with global opportunities, helping shape their pathways in professional football.</p>
+        <p>Young defensive midfielder with excellent tactical awareness and passing range. Mack BS Briggs is a Liberian football scout, technical director, and semi-pro footballer who currently serves as a key figure at Galaxy Sports Management Ltd. Having started his journey as a former youth national-team player (U14) for Liberia, he now uses his on-field experience and scouting expertise to identify and develop emerging football talent. Through Galaxy Sports Management Ltd, Mack BS Briggs connects young athletes — especially women's players — with global opportunities, helping shape their pathways in professional football.</p>
+        
+        <h3 style="margin-top:24px">Career Highlights</h3>
+        <ul>
+          <li>Former Liberia U14 National Team Player</li>
+          <li>Technical Director at Galaxy Sports Management Ltd</li>
+          <li>Active Football Scout specializing in youth talent</li>
+          <li>Semi-Professional Footballer</li>
+          <li>Expertise in women's football development pathways</li>
+        </ul>
+        
+        <h3 style="margin-top:24px">Playing Style</h3>
+        <p>As a defensive midfielder, Mack combines strong tactical awareness with excellent passing range. His experience on the pitch informs his scouting work, allowing him to identify technical ability and tactical intelligence in emerging players.</p>
       </article>
-      <div class="text-center" style="margin-top:18px;"><a href="news.html" class="btn">Back to News</a></div>
+      <div class="text-center" style="margin-top:18px;"><a href="players.html" class="btn">Back to Players</a></div>
     </main>
 
     <footer>
@@ -56,5 +253,7 @@
       <div class="contact-details">Email: info@galaxysports.com • Tel: +35799641238</div>
     </footer>
   </div>
+  
+  <button id="backToTop" aria-label="Back to top">↑</button>
 </body>
 </html>
