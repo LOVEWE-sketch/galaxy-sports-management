@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MARCUS LUOGON — Player Profile — Galaxy Sports</title>
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/menu.js"></script>
+  <script type="module" src="js/scripts.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Marcus Luogon",
+    "url": "https://galaxysportsmanagement.com/player-14.html",
+    "jobTitle": "Footballer",
+    "position": "Midfielder",
+    "nationality": "Liberia",
+    "sameAs": []
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <input type="checkbox" id="menu_checkbox" aria-label="Toggle navigation menu"><label for="menu_checkbox" aria-label="Open navigation menu"><div></div><div></div><div></div></label>
+  <nav class="nav-menu"><div class="nav-top"><img src="assets/images/logos/Galaxy Sports Management Ltd Logo.png" alt="logo" style="width:44px;height:44px;object-fit:contain;border-radius:8px;"/><h3>Galaxy Sports</h3></div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="teams.html">Teams</a></li><li><a href="players.html" class="active">Players</a></li><li><a href="news.html">News</a></li></ul><div class="nav-footer"><a class="cta" href="#contact">Contact</a></div></nav>
+  <label for="menu_checkbox" class="nav-overlay" aria-hidden="true"></label>
+
+  <div class="container">
+    <header>
+      <div class="brand"><img src="assets/images/logos/Galaxy Sports Management Ltd Logo.png" alt="logo" class="brand__logo" style="width:56px;height:56px;object-fit:contain;"/><div class="brand__title"><h1>Galaxy Sports Management Ltd</h1><p>Player placement • Trials • Academies</p></div></div>
+      <nav><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="teams.html">Teams</a><a href="players.html" class="active">Players</a><a href="news.html">News</a><a class="cta" href="#contact">Contact</a></nav>
+    </header>
+
+    <main id="main-content">
+      <section class="page-header"><h2>MARCUS LUOGON</h2><p>MF • Age 25 • Available for Trials</p></section>
+      
+      <style>
+        .player-gallery-slider{position:relative;width:100%;max-width:800px;height:450px;margin:0 auto 32px;border-radius:16px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.3)}
+        .gallery-slide{position:absolute;width:100%;height:100%;opacity:0;transition:opacity 1s ease-in-out}
+        .gallery-slide.active{opacity:1}
+        .gallery-slide img{width:100%;height:100%;object-fit:cover}
+        .gallery-indicators{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10}
+        .gallery-indicator{width:40px;height:4px;background:rgba(255,255,255,0.3);border-radius:2px;cursor:pointer;transition:all 0.3s}
+        .gallery-indicator.active{background:var(--accent);width:60px}
+        .player-stats-card{background:linear-gradient(135deg,#0b1220,#1a1f35);border:2px solid var(--accent);border-radius:16px;padding:24px;margin:24px 0;animation:slideInUp 0.6s ease-out}
+        @keyframes slideInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+        .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:16px}
+        .stat-item{text-align:center;padding:12px;background:rgba(255,255,255,0.02);border-radius:8px;transition:all 0.3s}
+        .stat-item:hover{background:rgba(31,182,255,0.1);transform:translateY(-2px)}
+        .stat-value{font-size:24px;font-weight:700;color:var(--accent);display:block}
+        .stat-label{font-size:12px;color:var(--muted);text-transform:uppercase;margin-top:4px}
+        @media (max-width:640px){.player-gallery-slider{height:300px}.stats-grid{grid-template-columns:repeat(2,1fr)}}
+      </style>
+      
+      <div class="player-gallery-slider">
+        <div class="gallery-slide active"><img src="assets/images/misc/default-player.svg" alt="Marcus Luogon" loading="eager" width="800" height="450"></div>
+        <div class="gallery-indicators">
+          <div class="gallery-indicator active" data-slide="0"></div>
+        </div>
+      </div>
+      
+      <script>
+        (function(){const slides=document.querySelectorAll('.gallery-slide');const indicators=document.querySelectorAll('.gallery-indicator');let currentSlide=0;let autoplayInterval;function showSlide(index){slides.forEach(s=>s.classList.remove('active'));indicators.forEach(i=>i.classList.remove('active'));slides[index].classList.add('active');indicators[index].classList.add('active');currentSlide=index}function nextSlide(){const next=(currentSlide+1)%slides.length;showSlide(next)}function startAutoplay(){autoplayInterval=setInterval(nextSlide,4000)}function stopAutoplay(){clearInterval(autoplayInterval)}indicators.forEach((indicator,index)=>{indicator.addEventListener('click',()=>{showSlide(index);stopAutoplay();setTimeout(startAutoplay,8000)})});startAutoplay()})();
+      </script>
+      
+      <div class="player-stats-card">
+        <h3 style="margin-top:0;color:var(--accent)">Player Profile</h3>
+        <div class="stats-grid">
+          <div class="stat-item"><span class="stat-value">25</span><span class="stat-label">Age</span></div>
+          <div class="stat-item"><span class="stat-value">MF</span><span class="stat-label">Position</span></div>
+          <div class="stat-item"><span class="stat-value">🇱🇷</span><span class="stat-label">Liberia</span></div>
+          <div class="stat-item"><span class="stat-value">✅</span><span class="stat-label">Available</span></div>
+          <div class="stat-item"><span class="stat-value">⚽</span><span class="stat-label">Trials Welcome</span></div>
+          <div class="stat-item"><span class="stat-value">Free</span><span class="stat-label">Status</span></div>
+        </div>
+      </div>
+      
+      <article class="card">
+        <h3>Talented Midfielder Seeking Opportunities</h3>
+        <p>Marcus Luogon is a talented 25-year-old Liberian midfielder currently seeking professional opportunities. Marcus is actively available for trials and contract negotiations with clubs looking for a dedicated midfielder with strong technical abilities.</p>
+        
+        <h3 style="margin-top:24px">Open to Opportunities</h3>
+        <p>As an open player, Marcus is flexible and willing to help clubs at various levels. He brings commitment, professionalism, and a strong desire to develop his career in competitive football environments. Marcus is open to trial opportunities both domestically and internationally, and is ready to demonstrate his abilities to interested clubs.</p>
+        
+        <h3 style="margin-top:24px">Professional Approach</h3>
+        <p>Through Galaxy Sports Management, Marcus is actively seeking the right club match where he can contribute immediately while continuing his development. His availability and willingness to relocate make him an attractive option for clubs seeking midfield reinforcements.</p>
+        
+        <h3 style="margin-top:24px">Contact for Opportunities</h3>
+        <p>Clubs interested in arranging trials or discussions regarding Marcus Luogon should contact Galaxy Sports Management. We can provide additional information, arrange trials, and facilitate all necessary logistics for potential signings.</p>
+      </article>
+      <div class="text-center" style="margin-top:18px;"><a href="players.html" class="btn">Back to Players</a></div>
+    </main>
+
+    <button id="backToTop" aria-label="Back to top">↑</button>
+
+    <footer>
+      <div><strong>Galaxy Sports Management Ltd</strong><div class="copyright">© <span id="yr"></span> All rights reserved</div></div>
+      <div class="contact-details">Email: info@galaxysports.com • Tel: +35799641238</div>
+    </footer>
+  </div>
+</body>
+</html>

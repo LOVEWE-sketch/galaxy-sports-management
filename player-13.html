@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ALIEU SHERIFF — Player Profile — Galaxy Sports</title>
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/menu.js"></script>
+  <script type="module" src="js/scripts.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alieu Sheriff",
+    "url": "https://galaxysportsmanagement.com/player-13.html",
+    "jobTitle": "Footballer",
+    "position": "Forward",
+    "nationality": "Liberia / Netherlands",
+    "sameAs": []
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <input type="checkbox" id="menu_checkbox" aria-label="Toggle navigation menu"><label for="menu_checkbox" aria-label="Open navigation menu"><div></div><div></div><div></div></label>
+  <nav class="nav-menu"><div class="nav-top"><img src="assets/images/logos/Galaxy Sports Management Ltd Logo.png" alt="logo" style="width:44px;height:44px;object-fit:contain;border-radius:8px;"/><h3>Galaxy Sports</h3></div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="teams.html">Teams</a></li><li><a href="players.html" class="active">Players</a></li><li><a href="news.html">News</a></li></ul><div class="nav-footer"><a class="cta" href="#contact">Contact</a></div></nav>
+  <label for="menu_checkbox" class="nav-overlay" aria-hidden="true"></label>
+
+  <div class="container">
+    <header>
+      <div class="brand"><img src="assets/images/logos/Galaxy Sports Management Ltd Logo.png" alt="logo" class="brand__logo" style="width:56px;height:56px;object-fit:contain;"/><div class="brand__title"><h1>Galaxy Sports Management Ltd</h1><p>Player placement • Trials • Academies</p></div></div>
+      <nav><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="teams.html">Teams</a><a href="players.html" class="active">Players</a><a href="news.html">News</a><a class="cta" href="#contact">Contact</a></nav>
+    </header>
+
+    <main id="main-content">
+      <section class="page-header"><h2>ALIEU SHERIFF</h2><p>FW • Age 27 • Ethnikos Assia (Cyprus)</p></section>
+      
+      <style>
+        .player-gallery-slider{position:relative;width:100%;max-width:800px;height:450px;margin:0 auto 32px;border-radius:16px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.3)}
+        .gallery-slide{position:absolute;width:100%;height:100%;opacity:0;transition:opacity 1s ease-in-out}
+        .gallery-slide.active{opacity:1}
+        .gallery-slide img{width:100%;height:100%;object-fit:cover}
+        .gallery-indicators{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10}
+        .gallery-indicator{width:40px;height:4px;background:rgba(255,255,255,0.3);border-radius:2px;cursor:pointer;transition:all 0.3s}
+        .gallery-indicator.active{background:var(--accent);width:60px}
+        .player-stats-card{background:linear-gradient(135deg,#0b1220,#1a1f35);border:2px solid var(--accent);border-radius:16px;padding:24px;margin:24px 0;animation:slideInUp 0.6s ease-out}
+        @keyframes slideInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+        .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:16px}
+        .stat-item{text-align:center;padding:12px;background:rgba(255,255,255,0.02);border-radius:8px;transition:all 0.3s}
+        .stat-item:hover{background:rgba(31,182,255,0.1);transform:translateY(-2px)}
+        .stat-value{font-size:24px;font-weight:700;color:var(--accent);display:block}
+        .stat-label{font-size:12px;color:var(--muted);text-transform:uppercase;margin-top:4px}
+        @media (max-width:640px){.player-gallery-slider{height:300px}.stats-grid{grid-template-columns:repeat(2,1fr)}}
+      </style>
+      
+      <div class="player-gallery-slider">
+        <div class="gallery-slide active"><img src="assets/images/Alieu Sheriff/Alieu Sheriff.jpg" alt="Alieu Sheriff" loading="eager" width="800" height="450"></div>
+        <div class="gallery-slide"><img src="assets/images/Alieu Sheriff/ALIEU SHERIFF SIGNED LICOSIA FC.jpg" alt="Alieu Sheriff signing for Licosia FC" loading="lazy" width="800" height="450"></div>
+        <div class="gallery-slide"><img src="assets/images/Alieu Sheriff/ALIEU SHERIFF LICOSIA CUP.jpg" alt="Alieu Sheriff Licosia Cup" loading="lazy" width="800" height="450"></div>
+        <div class="gallery-slide"><img src="assets/images/Alieu Sheriff/2022_12_18_14_52_IMG_1269.PNG" alt="Alieu Sheriff in action" loading="lazy" width="800" height="450"></div>
+        <div class="gallery-indicators">
+          <div class="gallery-indicator active" data-slide="0"></div>
+          <div class="gallery-indicator" data-slide="1"></div>
+          <div class="gallery-indicator" data-slide="2"></div>
+          <div class="gallery-indicator" data-slide="3"></div>
+        </div>
+      </div>
+      
+      <script>
+        (function(){const slides=document.querySelectorAll('.gallery-slide');const indicators=document.querySelectorAll('.gallery-indicator');let currentSlide=0;let autoplayInterval;function showSlide(index){slides.forEach(s=>s.classList.remove('active'));indicators.forEach(i=>i.classList.remove('active'));slides[index].classList.add('active');indicators[index].classList.add('active');currentSlide=index}function nextSlide(){const next=(currentSlide+1)%slides.length;showSlide(next)}function startAutoplay(){autoplayInterval=setInterval(nextSlide,4000)}function stopAutoplay(){clearInterval(autoplayInterval)}indicators.forEach((indicator,index)=>{indicator.addEventListener('click',()=>{showSlide(index);stopAutoplay();setTimeout(startAutoplay,8000)})});startAutoplay()})();
+      </script>
+      
+      <div class="player-stats-card">
+        <h3 style="margin-top:0;color:var(--accent)">Player Profile</h3>
+        <div class="stats-grid">
+          <div class="stat-item"><span class="stat-value">27</span><span class="stat-label">Age (Born 2 Sep 1997)</span></div>
+          <div class="stat-item"><span class="stat-value">FW</span><span class="stat-label">Position</span></div>
+          <div class="stat-item"><span class="stat-value">🇱🇷🇳🇱</span><span class="stat-label">Liberia/Netherlands</span></div>
+          <div class="stat-item"><span class="stat-value">6'2"</span><span class="stat-label">Height (188cm)</span></div>
+          <div class="stat-item"><span class="stat-value">11</span><span class="stat-label">Goals (16 Games)</span></div>
+          <div class="stat-item"><span class="stat-value">🏆</span><span class="stat-label">Top Scorer</span></div>
+        </div>
+      </div>
+      
+      <article class="card">
+        <h3>Clinical Striker with Impressive Record</h3>
+        <p>Alieu Sheriff is a prolific 27-year-old Liberian-Dutch forward currently playing for Ethnikos Assia in Cyprus. Born in Monrovia, Liberia to Liberian parents on September 2, 1997, Alieu later moved to the Netherlands where he developed his football career while pursuing higher education.</p>
+        
+        <h3 style="margin-top:24px">Recent Form & Achievements</h3>
+        <p>Alieu continues his impressive goal-scoring form from last season, where he netted <strong>11 goals in just 16 matches</strong> despite spending considerable time on the sidelines due to injuries. In his club's first official pre-season friendly, it took him just <strong>45 minutes to register a brace</strong> in Ethnikos Assia's commanding 4-0 victory over fellow Cyprus side Doxa PALAIO Oxoy.</p>
+        
+        <h3 style="margin-top:24px">Physical & Playing Style</h3>
+        <p>Standing at an imposing <strong>6'2" (188cm)</strong>, Alieu combines physical presence with clinical finishing ability. His height advantage makes him a dominant force in aerial duels, while his intelligent movement and positioning ensure he's always a threat in the penalty area. Despite injury setbacks, his goal-scoring record demonstrates his natural finishing instinct and ability to make an immediate impact.</p>
+        
+        <h3 style="margin-top:24px">Education & Character</h3>
+        <p>Beyond football, Alieu is a <strong>graduate of Manchester Metropolitan University</strong> where he earned degrees in <strong>Law and Business</strong>. This educational background demonstrates his intelligence, discipline, and ability to balance professional football with academic excellence. His university education provides him with valuable skills for life both on and off the pitch.</p>
+        
+        <h3 style="margin-top:24px">International Ambitions</h3>
+        <p>Alieu has consistently announced his intention to represent Liberia at international level, aspiring to wear the shirt of the <strong>Lone Star</strong>. His dual nationality (Liberian-Dutch) and strong connection to his Liberian roots make him a potential asset for the national team, bringing European football experience and a proven goal-scoring record.</p>
+        
+        <h3 style="margin-top:24px">Career Highlights</h3>
+        <ul>
+          <li><strong>Ethnikos Assia (2021/22):</strong> 11 goals in 16 games, Top Scorer</li>
+          <li><strong>Coca-Cola Cup Cyprus:</strong> Runners-up medal (2021/22)</li>
+          <li><strong>Glossop North End (2019/20):</strong> 9 goals in 19 games, Top Scorer</li>
+          <li><strong>Multiple top scorer awards</strong> across England, Wales, and Cyprus</li>
+          <li>Graduate of Manchester Metropolitan University (Law & Business)</li>
+          <li>Qualified for Europa League with Bangor City (2017/18)</li>
+          <li>Huws Gray Alliance Cup winner with Flint Town United (2017/18)</li>
+        </ul>
+        
+        <h3 style="margin-top:24px">Career Journey</h3>
+        <p>Alieu's football journey has taken him across multiple countries and leagues. From youth football in England with FCUOM U21 and Chadderton U21 (where he scored 23 goals in 30 games), he progressed through senior football in Wales with clubs like Bangor City, Flint Town United, and Denbigh Town. His move to English non-league football with Glossop North End saw him become their top scorer before making the successful transition to Cyprus football with Ethnikos Assia, where he has established himself as one of the league's most dangerous strikers.</p>
+      </article>
+      <div class="text-center" style="margin-top:18px;"><a href="players.html" class="btn">Back to Players</a></div>
+    </main>
+
+    <button id="backToTop" aria-label="Back to top">↑</button>
+
+    <footer>
+      <div><strong>Galaxy Sports Management Ltd</strong><div class="copyright">© <span id="yr"></span> All rights reserved</div></div>
+      <div class="contact-details">Email: info@galaxysports.com • Tel: +35799641238</div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -95,13 +95,58 @@
         <p>Striker • Age 22 • KAPA Kajanni (Finland)</p>
       </section>
 
-      <article class="card">
-        <div class="player-gallery">
-          <div class="player-main">
-            <img class="player-image" src="assets/images/news/santiago signed flyer.JPG" alt="Santiago De Sousa signing announcement" onerror="this.onerror=null;this.src='assets/images/misc/default-player.svg'">
-          </div>
+      <style>
+        .player-gallery-slider{position:relative;width:100%;max-width:800px;height:450px;margin:0 auto 32px;border-radius:16px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.3)}
+        .gallery-slide{position:absolute;width:100%;height:100%;opacity:0;transition:opacity 1s ease-in-out}
+        .gallery-slide.active{opacity:1}
+        .gallery-slide img{width:100%;height:100%;object-fit:cover}
+        .gallery-indicators{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10}
+        .gallery-indicator{width:40px;height:4px;background:rgba(255,255,255,0.3);border-radius:2px;cursor:pointer;transition:all 0.3s}
+        .gallery-indicator.active{background:var(--accent);width:60px}
+        .player-stats-card{background:linear-gradient(135deg,#0b1220,#1a1f35);border:2px solid var(--accent);border-radius:16px;padding:24px;margin:24px 0;animation:slideInUp 0.6s ease-out}
+        @keyframes slideInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+        .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:16px}
+        .stat-item{text-align:center;padding:12px;background:rgba(255,255,255,0.02);border-radius:8px;transition:all 0.3s}
+        .stat-item:hover{background:rgba(31,182,255,0.1);transform:translateY(-2px)}
+        .stat-value{font-size:24px;font-weight:700;color:var(--accent);display:block}
+        .stat-label{font-size:12px;color:var(--muted);text-transform:uppercase;margin-top:4px}
+        @media (max-width:640px){.player-gallery-slider{height:300px}.stats-grid{grid-template-columns:repeat(2,1fr)}}
+      </style>
+      
+      <div class="player-gallery-slider">
+        <div class="gallery-slide active"><img src="assets/images/santiago de sousa/santiago signed flyer.JPG" alt="Santiago De Sousa signing announcement" loading="eager" width="800" height="450" onerror="this.onerror=null;this.src='assets/images/misc/default-player.svg'"></div>
+        <div class="gallery-slide"><img src="assets/images/santiago de sousa/santiago.jpg" alt="Santiago De Sousa" loading="lazy" width="800" height="450" onerror="this.onerror=null;this.src='assets/images/misc/default-player.svg'"></div>
+        <div class="gallery-slide"><img src="assets/images/santiago de sousa/de sousa santiago.jpg" alt="Santiago De Sousa in action" loading="lazy" width="800" height="450" onerror="this.onerror=null;this.src='assets/images/misc/default-player.svg'"></div>
+        <div class="gallery-slide"><img src="assets/images/santiago de sousa/santigo de sousa2.jpg" alt="Santiago De Sousa portrait" loading="lazy" width="800" height="450" onerror="this.onerror=null;this.src='assets/images/misc/default-player.svg'"></div>
+        <div class="gallery-slide"><img src="assets/images/santiago de sousa/santiago de sousa 3.jpg" alt="Santiago De Sousa playing" loading="lazy" width="800" height="450" onerror="this.onerror=null;this.src='assets/images/misc/default-player.svg'"></div>
+        <div class="gallery-slide"><img src="assets/images/santiago de sousa/santiago de sousa 9.jpg" alt="Santiago De Sousa action shot" loading="lazy" width="800" height="450" onerror="this.onerror=null;this.src='assets/images/misc/default-player.svg'"></div>
+        <div class="gallery-indicators">
+          <div class="gallery-indicator active" data-slide="0"></div>
+          <div class="gallery-indicator" data-slide="1"></div>
+          <div class="gallery-indicator" data-slide="2"></div>
+          <div class="gallery-indicator" data-slide="3"></div>
+          <div class="gallery-indicator" data-slide="4"></div>
+          <div class="gallery-indicator" data-slide="5"></div>
         </div>
+      </div>
+      
+      <script>
+        (function(){const slides=document.querySelectorAll('.gallery-slide');const indicators=document.querySelectorAll('.gallery-indicator');let currentSlide=0;let autoplayInterval;function showSlide(index){slides.forEach(s=>s.classList.remove('active'));indicators.forEach(i=>i.classList.remove('active'));slides[index].classList.add('active');indicators[index].classList.add('active');currentSlide=index}function nextSlide(){const next=(currentSlide+1)%slides.length;showSlide(next)}function startAutoplay(){autoplayInterval=setInterval(nextSlide,4000)}function stopAutoplay(){clearInterval(autoplayInterval)}indicators.forEach((indicator,index)=>{indicator.addEventListener('click',()=>{showSlide(index);stopAutoplay();setTimeout(startAutoplay,8000)})});startAutoplay()})();
+      </script>
+      
+      <div class="player-stats-card">
+        <h3 style="margin-top:0;color:var(--accent)">Player Profile</h3>
+        <div class="stats-grid">
+          <div class="stat-item"><span class="stat-value">22</span><span class="stat-label">Age</span></div>
+          <div class="stat-item"><span class="stat-value">ST</span><span class="stat-label">Position</span></div>
+          <div class="stat-item"><span class="stat-value">🇻🇪</span><span class="stat-label">Venezuela</span></div>
+          <div class="stat-item"><span class="stat-value">⚽</span><span class="stat-label">Clinical Finisher</span></div>
+          <div class="stat-item"><span class="stat-value">✅</span><span class="stat-label">Pro Contract</span></div>
+          <div class="stat-item"><span class="stat-value">KAPA Kajanni</span><span class="stat-label">Current Club</span></div>
+        </div>
+      </div>
 
+      <article class="card">
         <h3>About Santiago</h3>
         <p>Santiago De Sousa is a talented Venezuelan striker who recently made the significant step of signing his first professional contract with KAPA Kajanni in Finland's 5th division (Kolmonen). This represents a major milestone in his career and showcases Galaxy Sports Management's commitment to placing players in competitive European leagues.</p>
 

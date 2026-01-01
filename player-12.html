@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SARAH ESSAM — Player Profile — Galaxy Sports</title>
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/menu.js"></script>
+  <script type="module" src="js/scripts.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sarah Essam Mohamed Salah Eldin Mohamed Hassanin",
+    "url": "https://galaxysportsmanagement.com/player-12.html",
+    "image": "https://galaxysportsmanagement.com/assets/images/sarah-essam/sarah%20essam.jpg",
+    "jobTitle": "Footballer",
+    "position": "Winger / Forward",
+    "nationality": "Egypt",
+    "sameAs": []
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <input type="checkbox" id="menu_checkbox" aria-label="Toggle navigation menu"><label for="menu_checkbox" aria-label="Open navigation menu"><div></div><div></div><div></div></label>
+  <nav class="nav-menu"><div class="nav-top"><img src="assets/images/logos/Galaxy Sports Management Ltd Logo.png" alt="logo" style="width:44px;height:44px;object-fit:contain;border-radius:8px;"/><h3>Galaxy Sports</h3></div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="teams.html">Teams</a></li><li><a href="players.html" class="active">Players</a></li><li><a href="news.html">News</a></li></ul><div class="nav-footer"><a class="cta" href="#contact">Contact</a></div></nav>
+  <label for="menu_checkbox" class="nav-overlay" aria-hidden="true"></label>
+
+  <div class="container">
+    <header>
+      <div class="brand"><img src="assets/images/logos/Galaxy Sports Management Ltd Logo.png" alt="logo" class="brand__logo" style="width:56px;height:56px;object-fit:contain;"/><div class="brand__title"><h1>Galaxy Sports Management Ltd</h1><p>Player placement • Trials • Academies</p></div></div>
+      <nav><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="teams.html">Teams</a><a href="players.html" class="active">Players</a><a href="news.html">News</a><a class="cta" href="#contact">Contact</a></nav>
+    </header>
+
+    <main id="main-content">
+      <section class="page-header"><h2>SARAH ESSAM</h2><p>FW/WG • Age 26 • Hull City Ladies FC • FIFA Ambassador</p></section>
+      
+      <style>
+        .player-gallery-slider{position:relative;width:100%;max-width:800px;height:450px;margin:0 auto 32px;border-radius:16px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.3)}
+        .gallery-slide{position:absolute;width:100%;height:100%;opacity:0;transition:opacity 1s ease-in-out}
+        .gallery-slide.active{opacity:1}
+        .gallery-slide img{width:100%;height:100%;object-fit:cover}
+        .gallery-indicators{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10}
+        .gallery-indicator{width:40px;height:4px;background:rgba(255,255,255,0.3);border-radius:2px;cursor:pointer;transition:all 0.3s}
+        .gallery-indicator.active{background:var(--accent);width:60px}
+        .player-stats-card{background:linear-gradient(135deg,#0b1220,#1a1f35);border:2px solid var(--accent);border-radius:16px;padding:24px;margin:24px 0;animation:slideInUp 0.6s ease-out}
+        @keyframes slideInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+        .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:16px}
+        .stat-item{text-align:center;padding:12px;background:rgba(255,255,255,0.02);border-radius:8px;transition:all 0.3s}
+        .stat-item:hover{background:rgba(31,182,255,0.1);transform:translateY(-2px)}
+        .stat-value{font-size:24px;font-weight:700;color:var(--accent);display:block}
+        .stat-label{font-size:12px;color:var(--muted);text-transform:uppercase;margin-top:4px}
+        @media (max-width:640px){.player-gallery-slider{height:300px}.stats-grid{grid-template-columns:repeat(2,1fr)}}
+      </style>
+      
+      <div class="player-gallery-slider">
+        <div class="gallery-slide active"><img src="assets/images/sarah-essam/sarah essam.jpg" alt="Sarah Essam portrait" loading="eager" width="800" height="450"></div>
+        <div class="gallery-slide"><img src="assets/images/sarah-essam/sarah essam standing.JPG" alt="Sarah Essam standing" loading="lazy" width="800" height="450"></div>
+        <div class="gallery-slide"><img src="assets/images/sarah-essam/sarah essam jumping.JPG" alt="Sarah Essam jumping" loading="lazy" width="800" height="450"></div>
+        <div class="gallery-slide"><img src="assets/images/sarah-essam/sarah essam jumping higher.JPG" alt="Sarah Essam in action" loading="lazy" width="800" height="450"></div>
+        <div class="gallery-indicators">
+          <div class="gallery-indicator active" data-slide="0"></div>
+          <div class="gallery-indicator" data-slide="1"></div>
+          <div class="gallery-indicator" data-slide="2"></div>
+          <div class="gallery-indicator" data-slide="3"></div>
+        </div>
+      </div>
+      
+      <script>
+        (function(){const slides=document.querySelectorAll('.gallery-slide');const indicators=document.querySelectorAll('.gallery-indicator');let currentSlide=0;let autoplayInterval;function showSlide(index){slides.forEach(s=>s.classList.remove('active'));indicators.forEach(i=>i.classList.remove('active'));slides[index].classList.add('active');indicators[index].classList.add('active');currentSlide=index}function nextSlide(){const next=(currentSlide+1)%slides.length;showSlide(next)}function startAutoplay(){autoplayInterval=setInterval(nextSlide,4000)}function stopAutoplay(){clearInterval(autoplayInterval)}indicators.forEach((indicator,index)=>{indicator.addEventListener('click',()=>{showSlide(index);stopAutoplay();setTimeout(startAutoplay,8000)})});startAutoplay()})();
+      </script>
+      
+      <div class="player-stats-card">
+        <h3 style="margin-top:0;color:var(--accent)">Player Profile</h3>
+        <div class="stats-grid">
+          <div class="stat-item"><span class="stat-value">26</span><span class="stat-label">Age (Born 6 Apr 1999)</span></div>
+          <div class="stat-item"><span class="stat-value">FW/WG</span><span class="stat-label">Position</span></div>
+          <div class="stat-item"><span class="stat-value">🇪🇬</span><span class="stat-label">Egypt</span></div>
+          <div class="stat-item"><span class="stat-value">FIFA</span><span class="stat-label">Ambassador</span></div>
+          <div class="stat-item"><span class="stat-value">🌟</span><span class="stat-label">Arab Pioneer</span></div>
+          <div class="stat-item"><span class="stat-value">Open</span><span class="stat-label">Available</span></div>
+        </div>
+      </div>
+      
+      <article class="card">
+        <h3>Historic Trailblazer in Women's Football</h3>
+        <p>Sarah Essam Mohamed Salah Eldin Mohamed Hassanin (Arabic: سارة عصام) is a pioneering Egyptian footballer who has broken numerous barriers in women's football. Born on April 6, 1999, Sarah made history as the <strong>first Egyptian and Arab female to play football in the UK and Spain</strong>, opening doors for countless young Arab women aspiring to play professional football in Europe.</p>
+        
+        <h3 style="margin-top:24px">FIFA World Cup Ambassador</h3>
+        <p>Sarah's impact extends beyond the pitch. She was chosen as <strong>FIFA's official Ambassador for World Cup Qatar 2022</strong>, representing the voice of Arab women's football on the world's biggest stage. This prestigious role highlighted her influence as a role model and advocate for women's football development across the Middle East and North Africa region.</p>
+        
+        <h3 style="margin-top:24px">Playing Career</h3>
+        <p>A versatile attacker, Sarah plays as a <strong>winger and forward</strong> for English club <strong>Hull City Ladies FC</strong> in the National Premier League North. She is also a key member of the <strong>Egypt women's national team</strong>, where she represents her country with pride and passion. Her playing style combines technical skill, pace, and intelligent movement, making her a constant threat in the attacking third.</p>
+        
+        <h3 style="margin-top:24px">Available for Opportunities</h3>
+        <p>Sarah is currently an <strong>open player</strong> and available to help clubs seeking an experienced, internationally-recognized talent. With her proven track record across multiple countries and her status as a FIFA ambassador, she brings not only football quality but also immense marketing value and inspirational leadership to any organization.</p>
+        
+        <h3 style="margin-top:24px">Career Highlights</h3>
+        <ul>
+          <li>First Egyptian and Arab female to play football in the UK and Spain</li>
+          <li>FIFA World Cup Qatar 2022 Official Ambassador</li>
+          <li>Egypt Women's National Team international</li>
+          <li>Hull City Ladies FC (National Premier League North)</li>
+          <li>Professional experience in England and Spain</li>
+          <li>Pioneer and role model for Arab women's football</li>
+          <li>Media personality and advocate for women's sports development</li>
+        </ul>
+        
+        <h3 style="margin-top:24px">Legacy & Impact</h3>
+        <p>Sarah Essam's journey transcends football statistics. As a trailblazer for Arab women in professional football, she has inspired a generation of young girls across the Middle East to pursue their dreams. Her work as a FIFA ambassador and her visibility in international football have been instrumental in changing perceptions about women's football in conservative regions. Sarah continues to be a powerful voice for equality, opportunity, and the growth of women's sports throughout the Arab world.</p>
+      </article>
+      <div class="text-center" style="margin-top:18px;"><a href="players.html" class="btn">Back to Players</a></div>
+    </main>
+
+    <button id="backToTop" aria-label="Back to top">↑</button>
+
+    <footer>
+      <div><strong>Galaxy Sports Management Ltd</strong><div class="copyright">© <span id="yr"></span> All rights reserved</div></div>
+      <div class="contact-details">Email: info@galaxysports.com • Tel: +35799641238</div>
+    </footer>
+  </div>
+</body>
+</html>

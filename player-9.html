@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>TARTEV KCHERNIAN — Player Profile — Galaxy Sports</title>
+  <title>TARTEV KHACHATRYAN — Player Profile — Galaxy Sports</title>
   <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/style.css">
@@ -13,7 +13,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Tatev Khachatryan",
+    "name": "Tartev Khachatryan",
     "url": "https://galaxysportsmanagement.com/player-9.html",
     "image": "https://galaxysportsmanagement.com/assets/images/tartev-kchernian.jpg",
     "jobTitle": "Footballer",
@@ -24,23 +24,11 @@
   </script>
 </head>
 <body>
-  <!-- Skip to content link for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
   
   <input type="checkbox" id="menu_checkbox" aria-label="Toggle navigation menu"><label for="menu_checkbox" aria-label="Open navigation menu"><div></div><div></div><div></div></label>
-  <nav class="nav-menu">
-    <div class="nav-top"><img src="assets/images/logos/Galaxy Sports Management Ltd Logo.png" alt="logo" style="width:44px;height:44px;object-fit:contain;border-radius:8px;"/><h3>Galaxy Sports</h3></div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="teams.html">Teams</a></li>
-      <li><a href="players.html" class="active">Players</a></li>
-      <li><a href="news.html">News</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="nav-footer"><a class="cta" href="#contact">Contact</a></div>
-  </nav>
+  <nav class="nav-menu"><div class="nav-top"><img src="assets/images/logos/Galaxy Sports Management Ltd Logo.png" alt="logo" style="width:44px;height:44px;object-fit:contain;border-radius:8px;"/><h3>Galaxy Sports</h3></div><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="teams.html">Teams</a></li><li><a href="players.html" class="active">Players</a></li><li><a href="news.html">News</a></li></ul><div class="nav-footer"><a class="cta" href="#contact">Contact</a></div></nav>
+  <label for="menu_checkbox" class="nav-overlay" aria-hidden="true"></label>
 
   <div class="container">
     <header>
@@ -48,19 +36,69 @@
       <nav><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="teams.html">Teams</a><a href="players.html" class="active">Players</a><a href="news.html">News</a><a class="cta" href="#contact">Contact</a></nav>
     </header>
 
-    <main>
-      <section class="page-header"><h2>TARTEV KCHERNIAN</h2><p>FW • Age 18 • PUYNIK</p></section>
-      <article class="card">
-        <div class="player-gallery">
-          <div class="player-main">
-            <img class="player-image" src="assets/images/tartev-kchernian/tartev-kchernian.jpg" alt="TARTEV KCHERNIAN" onerror="this.onerror=null;this.src='assets/images/misc/default-player.svg'">
-          </div>
+    <main id="main-content">
+      <section class="page-header"><h2>TARTEV KHACHATRYAN</h2><p>FW • Age 18 • PUYNIK</p></section>
+      
+      <style>
+        .player-gallery-slider{position:relative;width:100%;max-width:800px;height:450px;margin:0 auto 32px;border-radius:16px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.3)}
+        .gallery-slide{position:absolute;width:100%;height:100%;opacity:0;transition:opacity 1s ease-in-out}
+        .gallery-slide.active{opacity:1}
+        .gallery-slide img{width:100%;height:100%;object-fit:cover}
+        .gallery-indicators{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10}
+        .gallery-indicator{width:40px;height:4px;background:rgba(255,255,255,0.3);border-radius:2px;cursor:pointer;transition:all 0.3s}
+        .gallery-indicator.active{background:var(--accent);width:60px}
+        .player-stats-card{background:linear-gradient(135deg,#0b1220,#1a1f35);border:2px solid var(--accent);border-radius:16px;padding:24px;margin:24px 0;animation:slideInUp 0.6s ease-out}
+        @keyframes slideInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+        .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:16px}
+        .stat-item{text-align:center;padding:12px;background:rgba(255,255,255,0.02);border-radius:8px;transition:all 0.3s}
+        .stat-item:hover{background:rgba(31,182,255,0.1);transform:translateY(-2px)}
+        .stat-value{font-size:24px;font-weight:700;color:var(--accent);display:block}
+        .stat-label{font-size:12px;color:var(--muted);text-transform:uppercase;margin-top:4px}
+        @media (max-width:640px){.player-gallery-slider{height:300px}.stats-grid{grid-template-columns:repeat(2,1fr)}}
+      </style>
+      
+      <div class="player-gallery-slider">
+        <div class="gallery-slide active"><img src="assets/images/Tartev Khachatryan/Tartev Khachatryan.jpg" alt="Tartev Khachatryan portrait" loading="eager" width="800" height="450" onerror="this.onerror=null;this.src='assets/images/misc/default-player.svg'"></div>
+        <div class="gallery-slide"><img src="assets/images/Tartev Khachatryan/Tartev Khachatryan 1.jpg" alt="Tartev Khachatryan in action" loading="lazy" width="800" height="450" onerror="this.onerror=null;this.src='assets/images/misc/default-player.svg'"></div>
+        <div class="gallery-indicators">
+          <div class="gallery-indicator active" data-slide="0"></div>
+          <div class="gallery-indicator" data-slide="1"></div>
         </div>
+      </div>
+      
+      <script>
+        (function(){const slides=document.querySelectorAll('.gallery-slide');const indicators=document.querySelectorAll('.gallery-indicator');let currentSlide=0;let autoplayInterval;function showSlide(index){slides.forEach(s=>s.classList.remove('active'));indicators.forEach(i=>i.classList.remove('active'));slides[index].classList.add('active');indicators[index].classList.add('active');currentSlide=index}function nextSlide(){const next=(currentSlide+1)%slides.length;showSlide(next)}function startAutoplay(){autoplayInterval=setInterval(nextSlide,4000)}function stopAutoplay(){clearInterval(autoplayInterval)}indicators.forEach((indicator,index)=>{indicator.addEventListener('click',()=>{showSlide(index);stopAutoplay();setTimeout(startAutoplay,8000)})});startAutoplay()})();
+      </script>
+      
+      <div class="player-stats-card">
+        <h3 style="margin-top:0;color:var(--accent)">Player Profile</h3>
+        <div class="stats-grid">
+          <div class="stat-item"><span class="stat-value">18</span><span class="stat-label">Age</span></div>
+          <div class="stat-item"><span class="stat-value">FW</span><span class="stat-label">Position</span></div>
+          <div class="stat-item"><span class="stat-value">🇦🇲</span><span class="stat-label">Armenia</span></div>
+          <div class="stat-item"><span class="stat-value">27</span><span class="stat-label">Goals (3 Seasons)</span></div>
+          <div class="stat-item"><span class="stat-value">🏆</span><span class="stat-label">Youth Int'l</span></div>
+          <div class="stat-item"><span class="stat-value">PUYNIK</span><span class="stat-label">Current Club</span></div>
+        </div>
+      </div>
+      
+      <article class="card">
         <h3>About</h3>
-        <p>Tatev Khachatryan is an 18‑year‑old Armenian forward currently playing for FC Pyunik Yerevan Women (Pyunik Girls). She joined Pyunik in 2025 after a successful spell with Ararat-Armenia Girls, where she scored 27 goals over three seasons, highlighting her attacking prowess. Tatev has also represented Armenia at youth and senior national levels (U16, U17, U19, and senior), bringing pace, energy, and a natural goal‑scoring instinct to both her club and country.</p>
+        <p>Tartev Khachatryan is a promising 18-year-old Armenian forward currently playing for FC Pyunik Yerevan Women (Pyunik Girls) in the Armenian Premier League. She joined Pyunik in 2025 after an outstanding spell with Ararat-Armenia Girls, where she scored an impressive 27 goals over three seasons, demonstrating her natural goal-scoring instinct and attacking prowess. Tartev has also represented Armenia at multiple youth and senior national levels (U16, U17, U19, and senior team), bringing pace, energy, and excellent aerial presence to both her club and country. Her powerful shooting, consistent goal contributions, and developing talent make her a high-potential player with a bright future ahead.</p>
+        
+        <h3 style="margin-top:24px">Career Highlights</h3>
+        <ul>
+          <li>27 goals in 3 seasons with Ararat-Armenia Girls</li>
+          <li>Armenia international (U16, U17, U19, and Senior team)</li>
+          <li>Currently playing in Armenian Premier League with FC Pyunik</li>
+          <li>Strong wing forward with excellent aerial ability</li>
+          <li>Powerful shooting and consistent goal contributions</li>
+        </ul>
       </article>
       <div class="text-center" style="margin-top:18px;"><a href="players.html" class="btn">Back to Players</a></div>
     </main>
+
+    <button id="backToTop" aria-label="Back to top">↑</button>
 
     <footer>
       <div><strong>Galaxy Sports Management Ltd</strong><div class="copyright">© <span id="yr"></span> All rights reserved</div></div>

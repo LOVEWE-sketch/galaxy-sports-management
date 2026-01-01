@@ -477,6 +477,20 @@
         font-size: 2rem;
       }
     }
+    
+    /* Leadership team card styles */
+    .team-card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .team-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 32px rgba(14,165,255,0.2);
+    }
   </style>
   <script defer src="js/menu.js"></script>
   <script type="module" src="js/scripts.js"></script>
@@ -622,6 +636,90 @@
             <div class="value-tag">Continuous Growth</div>
             <div class="value-tag">Excellence Always</div>
           </div>
+        </div>
+      </section>
+
+      <!-- LEADERSHIP TEAM -->
+      <section id="leadership-team" class="leadership-section" style="margin-bottom: 64px;">
+        <h3 style="text-align:center; margin-bottom: 40px;">Leadership Team</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;">
+          
+          <!-- Ajayi Adeniran -->
+          <div class="team-card" style="background: var(--card); border-radius: 12px; padding: 24px; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="assets/images/ajayi-adeniran/Ajayi Adeniran (1).jpg" alt="Ajayi Adeniran" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto 16px; border: 3px solid var(--accent);">
+            <h4 style="margin-bottom: 4px;">Ajayi Adeniran</h4>
+            <p style="color: var(--accent); font-weight: 600; margin-bottom: 12px;">CEO & Licensed Agent</p>
+            <p style="color: var(--muted); font-size: 0.9rem; margin-bottom: 16px;">Leading Galaxy Sports with vision, integrity, and a player-first approach to football representation.</p>
+            <div style="display: flex; gap: 12px; justify-content: center; margin-bottom: 16px;">
+              <a href="https://www.instagram.com/galaxy_sports_management_ltd/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: var(--accent); transition: opacity 0.3s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"></circle></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/ajayi-adeniran-522562b3/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="color: var(--accent); transition: opacity 0.3s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V8h4v2"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </a>
+            </div>
+            <a href="bio-ajayi-adeniran.html" class="cta" style="display: inline-block; padding: 10px 20px; text-decoration: none; font-size: 0.9rem;">View Full Bio</a>
+          </div>
+
+          <!-- Mack BS Briggs -->
+          <div class="team-card" style="background: var(--card); border-radius: 12px; padding: 24px; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="assets/images/mack-bs-briggs/MACK.jpeg" alt="Mack BS Briggs" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto 16px; border: 3px solid var(--accent);">
+            <h4 style="margin-bottom: 4px;">Mack BS Briggs</h4>
+            <p style="color: var(--accent); font-weight: 600; margin-bottom: 12px;">Co-CEO, Technical Director & Scout</p>
+            <p style="color: var(--muted); font-size: 0.9rem; margin-bottom: 16px;">Bringing technical expertise and scouting excellence to talent identification and development.</p>
+            <div style="display: flex; gap: 12px; justify-content: center; margin-bottom: 16px;">
+              <a href="https://www.instagram.com/briggs_231/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: var(--accent); transition: opacity 0.3s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"></circle></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/mack-bs-briggs-1a4634135/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="color: var(--accent); transition: opacity 0.3s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V8h4v2"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </a>
+            </div>
+            <a href="bio-mack-bs-briggs.html" class="cta" style="display: inline-block; padding: 10px 20px; text-decoration: none; font-size: 0.9rem;">View Full Bio</a>
+          </div>
+
+          <!-- Salau Ayobami Ibrahim -->
+          <div class="team-card" style="background: var(--card); border-radius: 12px; padding: 24px; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="assets/images/staff/default-avatar.svg" alt="Salau Ayobami Ibrahim" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto 16px; border: 3px solid var(--accent);" onerror="this.src='assets/images/misc/default-player.svg'">
+            <h4 style="margin-bottom: 4px;">Salau Ayobami Ibrahim</h4>
+            <p style="color: var(--accent); font-weight: 600; margin-bottom: 12px;">Co-CEO</p>
+            <p style="color: var(--muted); font-size: 0.9rem; margin-bottom: 16px;">Driving strategic growth and operational excellence across global markets.</p>
+            <div style="display: flex; gap: 12px; justify-content: center; margin-bottom: 16px;">
+              <a href="https://www.linkedin.com/in/ayobami-salau-30a623225/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="color: var(--accent); transition: opacity 0.3s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V8h4v2"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </a>
+            </div>
+            <a href="bio-salau-ayobami-ibrahim.html" class="cta" style="display: inline-block; padding: 10px 20px; text-decoration: none; font-size: 0.9rem;">View Full Bio</a>
+          </div>
+
+          <!-- Abayomi Olushesan -->
+          <div class="team-card" style="background: var(--card); border-radius: 12px; padding: 24px; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="assets/images/staff/default-avatar.svg" alt="Abayomi Olushesan" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto 16px; border: 3px solid var(--accent);" onerror="this.src='assets/images/misc/default-player.svg'">
+            <h4 style="margin-bottom: 4px;">Abayomi Olushesan</h4>
+            <p style="color: var(--accent); font-weight: 600; margin-bottom: 12px;">Legal Counsel</p>
+            <p style="color: var(--muted); font-size: 0.9rem; margin-bottom: 16px;">Ensuring legal excellence and regulatory compliance in all player representations.</p>
+            <div style="display: flex; gap: 12px; justify-content: center; margin-bottom: 16px;">
+              <a href="https://www.linkedin.com/in/abayomi-olushesan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="color: var(--accent); transition: opacity 0.3s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V8h4v2"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </a>
+            </div>
+            <a href="bio-abayomi-olushesan.html" class="cta" style="display: inline-block; padding: 10px 20px; text-decoration: none; font-size: 0.9rem;">View Full Bio</a>
+          </div>
+
+          <!-- Adam Abbas -->
+          <div class="team-card" style="background: var(--card); border-radius: 12px; padding: 24px; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <img src="assets/images/staff/default-avatar.svg" alt="Adam Abbas" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto 16px; border: 3px solid var(--accent);" onerror="this.src='assets/images/misc/default-player.svg'">
+            <h4 style="margin-bottom: 4px;">Adam Abbas</h4>
+            <p style="color: var(--accent); font-weight: 600; margin-bottom: 12px;">Scout & Travel Coordinator</p>
+            <p style="color: var(--muted); font-size: 0.9rem; margin-bottom: 16px;">Discovering talent and coordinating seamless international player movements.</p>
+            <div style="display: flex; gap: 12px; justify-content: center; margin-bottom: 16px;">
+              <a href="https://www.instagram.com/moussasson" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: var(--accent); transition: opacity 0.3s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"></circle></svg>
+              </a>
+            </div>
+            <a href="bio-adam-abbas.html" class="cta" style="display: inline-block; padding: 10px 20px; text-decoration: none; font-size: 0.9rem;">View Full Bio</a>
+          </div>
+
         </div>
       </section>
 

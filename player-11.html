@@ -124,8 +124,14 @@
         (function(){const slides=document.querySelectorAll('.gallery-slide');const indicators=document.querySelectorAll('.gallery-indicator');let currentSlide=0;let autoplayInterval;function showSlide(index){slides.forEach(s=>s.classList.remove('active'));indicators.forEach(i=>i.classList.remove('active'));slides[index].classList.add('active');indicators[index].classList.add('active');currentSlide=index}function nextSlide(){const next=(currentSlide+1)%slides.length;showSlide(next)}function startAutoplay(){autoplayInterval=setInterval(nextSlide,4000)}function stopAutoplay(){clearInterval(autoplayInterval)}indicators.forEach((indicator,index)=>{indicator.addEventListener('click',()=>{showSlide(index);stopAutoplay();setTimeout(startAutoplay,8000)})});startAutoplay()})();
       </script>
 
-      <article class="card">        <h3>About Riana</h3>
-        <p>Riana Cyrus is a dynamic Barbadian forward who has made the remarkable journey from Caribbean football to Europe's competitive women's leagues. Currently playing for Adanaspor in Turkey's Women's Second League, Riana represents a new generation of Caribbean talent making their mark in European football.</p>
+      <article class="card">
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;flex-wrap:wrap;">
+          <img src="assets/images/rianna-cyrus/adana.jpg" alt="Adanaspor logo" style="height:60px;width:auto;object-fit:contain;" onerror="this.style.display='none'">
+          <img src="assets/images/rianna-cyrus/barbados logo.jpg" alt="Barbados flag" style="height:40px;width:auto;object-fit:contain;" onerror="this.style.display='none'">
+        </div>
+        
+        <h3>Trial Success → International Transfer</h3>
+        <p>Placed with Adana in the Turkish Women's League after a standout trial season. Riana Cyrus is a dynamic Barbadian forward who has made the remarkable journey from Caribbean football to Europe's competitive women's leagues. Currently playing for Adanaspor in Turkey's Women's Second League, Riana represents a new generation of Caribbean talent making their mark in European football.</p>
 
         <h3>From Barbados to Turkey: A Trailblazing Journey</h3>
         <p>Born and raised in Barbados, Riana developed her football skills in the vibrant Caribbean football scene. Her exceptional talent and determination caught the attention of Galaxy Sports Management, who recognized her potential to compete at higher levels.</p>
