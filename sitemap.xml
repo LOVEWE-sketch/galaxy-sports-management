@@ -3,13 +3,13 @@
   <!-- Main Pages -->
   <url>
     <loc>https://galaxysportsmanagement.com/</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://galaxysportsmanagement.com/about.html</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -47,13 +47,31 @@
   <!-- Leadership Biographies -->
   <url>
     <loc>https://galaxysportsmanagement.com/bio-ajayi-adeniran.html</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://galaxysportsmanagement.com/bio-mack-bs-briggs.html</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://galaxysportsmanagement.com/bio-salau-ayobami-ibrahim.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://galaxysportsmanagement.com/bio-abayomi-olushesan.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://galaxysportsmanagement.com/bio-adam-abbas.html</loc>
+    <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -121,8 +139,40 @@
   </url>
   <url>
     <loc>https://galaxysportsmanagement.com/player-11.html</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://galaxysportsmanagement.com/player-12.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://galaxysportsmanagement.com/player-13.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://galaxysportsmanagement.com/player-14.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- News Articles -->
+  <url>
+    <loc>https://galaxysportsmanagement.com/news-item-1.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://galaxysportsmanagement.com/news-item-2.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>
